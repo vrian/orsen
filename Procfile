@@ -1,3 +1,3 @@
-web: python app.py runserver
-web: gunicorn orsen.wsgi:app --log-file -
+web: python manage.py runserver
+web: gunicorn orsen.wsgi
 heroku ps:scale web=1
