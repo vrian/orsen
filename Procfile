@@ -1,1 +1,1 @@
-web: gunicorn orsen.wsgi:app
+web: gunicorn orsen:app
