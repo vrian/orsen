@@ -3,12 +3,11 @@ from flask import jsonify
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world(req, res):
-	print("request: "+req)
-	print("response: "+res)
+def hello_world():
+
 	data = {
 		"conversationToken": "",
-		"expectUserResponse": true,
+		"expectUserResponse": True,
 		"expectedInputs": [{
 			"inputPrompt": {
 				"richInitialPrompt": {
