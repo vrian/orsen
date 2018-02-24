@@ -1,0 +1,36 @@
+{
+  "actions": [
+    {
+      "description": "Default Welcome Intent",
+      "name": "MAIN",
+      "fulfillment": {
+        "conversationName": "welcome"
+      },
+      "intent": {
+        "name": "actions.intent.MAIN"
+      }
+    }
+  ],
+  "conversations": {
+    "welcome": {
+      "name": "welcome",
+      "url": "https://us-central1-eliza-e81d0.cloudfunctions.net/eliza",
+      "fulfillmentApiVersion": 2,
+	  "inDialogIntents": [
+      {
+        "name": "actions.intent.NO_INPUT"
+      }
+    ]
+    },
+    "rawInput": {
+      "name": "rawInput",
+      "url": "https://us-central1-eliza-e81d0.cloudfunctions.net/eliza",
+      "fulfillmentApiVersion": 2,
+	  "inDialogIntents": [
+      {
+        "name": "actions.intent.NO_INPUT"
+      }
+    ]
+    }
+  }
+}
