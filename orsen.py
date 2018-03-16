@@ -4,6 +4,10 @@ from flask import request
 from flask import json
 app = Flask(__name__)
 
+
+@app.route('/', methods=["GET","POST"])
+def home():
+	return jsonify({"Page":"Home"})
 	
 @app.route('/orsen/', methods=["GET","POST"])
 def orsen():
@@ -11,14 +15,9 @@ def orsen():
 	#jsonData = request.data
 	requestData = request.get_json()#json.loads(jsonData)
 	
-	rawTextQuery = requestData["inputs"]["rawInputs"]["query"]
+	#rawTextQuery = requestData["inputs"]["rawInputs"]["query"]
 
-	data = {"conversationToken":"{\"state\":null,\"data\":{}}","expectUserResponse":True,"expectedInputs":[{"inputPrompt":{"initialPrompts":[{"textToSpeech":"Hello! I am Orsen! What is your name?"+rawTextQuery+""}],"noInputPrompts":[]},"possibleIntents":[{"intent":"actions.intent.TEXT"}]}]}
-		
-
-	#except Exception as e:
-		#flash(e)
-		#return render_template("login.html", error = error)
+	data = {"conversationToken":"{\"state\":null,\"data\":{}}","expectUserResponse":True,"expectedInputs":[{"inputPrompt":{"initialPrompts":[{"textToSpeech":"Hello! I am Orsen! What is your name?"+requestData+""}],"noInputPrompts":[]},"possibleIntents":[{"intent":"actions.intent.TEXT"}]}]}
 	
 	return jsonify(data)
 
