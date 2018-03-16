@@ -24,7 +24,7 @@ def orsen():
 	helllomehn = {}
 	
 	if json.dumps(requestData) == "true":
-		hellomehn = {}#request.json
+		hellomehn = request.json
 	
 	#rawTextQuery = requestData["inputs"]["rawInputs"]["query"]
 
