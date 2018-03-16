@@ -1,10 +1,11 @@
 from flask import Flask
 from flask import jsonify
+from flask import request
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-
+	
 	data = {
 		"conversationToken": "{'state':null,'data':{}}",
 		"expectUserResponse": True,
@@ -25,53 +26,40 @@ def hello_world():
 			}]
 		}]
 	}
+	
 	return jsonify(data)
 	
 	
 @app.route('/orsen/', methods=["GET","POST"])
 def orsen():
 
-    error = ''
-	
-    try:
-	
-        if request.method == "POST":
+	error = ''
+	data = {"result":"Method is get"}
+	#try:
+	if request.method == "POST":		
+		rawInput = request.form['inputs']['rawInputs']['query']
 		
-            rawInput = request.form['inputs']['rawInputs']['query']
-            #attempted_password = request.form['password']
-
-            #flash(attempted_username)
-            #flash(attempted_password)
-
-            #if attempted_username == "admin" and attempted_password == "password":
-            #    return redirect(url_for('dashboard'))
-				
-            #else:
-            #    error = "Invalid credentials. Try Again."
-
-        #return render_template("login.html", error = error)
-			data = {
-				"conversationToken": "{'state':null,'data':{}}",
-				"expectUserResponse": True,
-				"expectedInputs": [{
-					"inputPrompt": {
-						"initialPrompts": {	
-							"textToSpeech": "Hello! I am Orsen! What is your name?",
-							"displayText": "Hello! I am Orsen! What is your name?" + rawInput + ""
-						}
-					},
-					"possibleIntents": [{
-						"intent": "actions.intent.TEXT"
-					}]
+		data = {
+			"conversationToken": "{'state':null,'data':{}}",
+			"expectUserResponse": True,
+			"expectedInputs": [{
+				"inputPrompt": {
+					"initialPrompts": {	
+						"textToSpeech": "Hello! I am Orsen! What is your name?",
+						"displayText": "Hello! I am Orsen! What is your name?" + rawInput + ""
+					}
+				},
+				"possibleIntents": [{
+					"intent": "actions.intent.TEXT"
 				}]
-			}
+			}]
+		}
 
-    except Exception as e:
-        #flash(e)
-        #return render_template("login.html", error = error)
+	#except Exception as e:
+		#flash(e)
+		#return render_template("login.html", error = error)
 
 	return jsonify(data)
-		
 
 if __name__ == '__main__':
     app.run()
