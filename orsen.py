@@ -9,11 +9,11 @@ app = Flask(__name__)
 def home():
 	return jsonify({"Page":"Home"})
 	
-@app.route('/orsen/', methods=["GET","POST"])
+@app.route('/orsen/', methods=["POST"])
 def orsen():
 
 	#jsonData = request.data
-	#requestData = request.get_json()#json.loads(jsonData)
+	requestData = request.get_json()#json.loads(jsonData)
 	
 	#rawTextQuery = requestData["inputs"]["rawInputs"]["query"]
 
