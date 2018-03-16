@@ -1,3 +1,1 @@
-web: gunicorn orsen:app \
-    --log-file gunicorn.log \
-    --log-level DEBUG 
+web: gunicorn orsen:app 
