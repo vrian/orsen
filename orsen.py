@@ -19,7 +19,7 @@ def home():
 def orsen():
 
 	#jsonData = request.data
-	requestData = request.is_json
+	requestData = request.get_json()
 	
 	#rawTextQuery = requestData["inputs"]["rawInputs"]["query"]
 
