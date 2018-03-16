@@ -8,8 +8,8 @@ app = Flask(__name__)
 @app.route('/orsen/', methods=["GET","POST"])
 def orsen():
 
-	jsonData = request.data
-	requestData = json.loads(jsonData)
+	#jsonData = request.data
+	requestData = request.get_json()#json.loads(jsonData)
 	
 	rawTextQuery = requestData["inputs"]["rawInputs"]["query"]
 
