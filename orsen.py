@@ -42,7 +42,7 @@ def orsen():
 				"inputPrompt": {
 					"initialPrompts": {	
 						"textToSpeech": "Hello! I am Orsen! What is your name?",
-						"displayText": "Hello! I am Orsen! What is your name?" + rawInput + ""
+						"displayText": "Hello! I am Orsen! What is your name?" + "rawInput" + ""
 					}
 				},
 				"possibleIntents": [{
