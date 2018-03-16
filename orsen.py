@@ -32,11 +32,12 @@ def hello_world():
 def orsen():
 
     error = ''
+	
     try:
 	
         if request.method == "POST":
 		
-            print(request.form['expectedInputs'])
+            rawInput = request.form['inputs']['rawInputs']['query']
             #attempted_password = request.form['password']
 
             #flash(attempted_username)
@@ -49,6 +50,21 @@ def orsen():
             #    error = "Invalid credentials. Try Again."
 
         #return render_template("login.html", error = error)
+			data = {
+				"conversationToken": "{'state':null,'data':{}}",
+				"expectUserResponse": True,
+				"expectedInputs": [{
+					"inputPrompt": {
+						"initialPrompts": {	
+							"textToSpeech": "Hello! I am Orsen! What is your name?",
+							"displayText": "Hello! I am Orsen! What is your name?" + rawInput + ""
+						}
+					},
+					"possibleIntents": [{
+						"intent": "actions.intent.TEXT"
+					}]
+				}]
+			}
 
     except Exception as e:
         #flash(e)
