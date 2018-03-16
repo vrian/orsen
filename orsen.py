@@ -34,9 +34,24 @@ def hello_world():
 def orsen():
 
 	error = ''
-	data = {"result":"Method is get"}
+	#data = {"result":"Method is get"}
+	data = {
+			"conversationToken": "{'state':null,'data':{}}",
+			"expectUserResponse": True,
+			"expectedInputs": [{
+				"inputPrompt": {
+					"initialPrompts": {	
+						"textToSpeech": "Hello! I am Orsen! What is your name?",
+						"displayText": "Hello! I am Orsen! What is your name?" + rawInput + ""
+					}
+				},
+				"possibleIntents": [{
+					"intent": "actions.intent.TEXT"
+				}]
+			}]
+		}
 	#try:
-	if request.method == "GET":		
+	if request.method == "POST":		
 		rawInput = request.form['inputs']['rawInputs']['query']
 		
 		data = {
