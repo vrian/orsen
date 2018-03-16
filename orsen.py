@@ -36,7 +36,7 @@ def orsen():
 	error = ''
 	data = {"result":"Method is get"}
 	#try:
-	if request.method == "POST":		
+	if request.method == "GET":		
 		rawInput = request.form['inputs']['rawInputs']['query']
 		
 		data = {

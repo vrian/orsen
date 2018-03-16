@@ -7,14 +7,24 @@
         "conversationName": "welcome"
       },
       "intent": {
-        "name": "actions.intent.MAIN"
+        "name": "actions.intent.MAIN",
+		"trigger": {
+          "queryPatterns": [
+			"let me talk to Orsen",
+            "talk to Orsen",
+			"call Orsen",
+			"let me talk to Orson",
+            "talk to Orson",
+			"call Orson"
+          ]
+        }
       }
     }
   ],
   "conversations": {
     "welcome": {
       "name": "welcome",
-      "url": "https://us-central1-eliza-e81d0.cloudfunctions.net/eliza",
+      "url": "https://orsen.herokuapp.com/orsen",
       "fulfillmentApiVersion": 2,
 	  "inDialogIntents": [
       {
@@ -24,7 +34,7 @@
     },
     "rawInput": {
       "name": "rawInput",
-      "url": "https://us-central1-eliza-e81d0.cloudfunctions.net/eliza",
+      "url": "https://orsen.herokuapp.com/orsen",
       "fulfillmentApiVersion": 2,
 	  "inDialogIntents": [
       {
