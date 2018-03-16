@@ -35,13 +35,14 @@ def orsen():
 
 	error = ''
 	#data = {"result":"Method is get"}
-	data = {
+	data = {"conversationToken":"{\"state\":null,\"data\":{}}","expectUserResponse":True,"expectedInputs":[{"inputPrompt":{"initialPrompts":[{"textToSpeech":"Hello! I am Orsen! What is your name?"}],"noInputPrompts":[]},"possibleIntents":[{"intent":"actions.intent.TEXT"}]}]}
+	'''
 			"conversationToken": "{'state':null,'data':{}}",
 			"expectUserResponse": True,
 			"expectedInputs": [{
 				"inputPrompt": {
 					"initialPrompts": {	
-						"richInitialPrompt":{
+						#"richInitialPrompt":{
 							"items": [{
 								"simpleResponse": {
 									"textToSpeech": "Howdy! I can tell you fun facts about almost any number, like 42. What do you have in mind?",
@@ -62,6 +63,7 @@ def orsen():
 				}]
 			}]
 		}
+	
 	#try:
 	if request.method == "POST":		
 		rawInput = request.form['inputs']['rawInputs']['query']
@@ -85,7 +87,7 @@ def orsen():
 	#except Exception as e:
 		#flash(e)
 		#return render_template("login.html", error = error)
-
+	'''
 	return jsonify(data)
 
 if __name__ == '__main__':
