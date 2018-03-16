@@ -70,15 +70,15 @@ def orsen():
 			"conversationToken": "{'state':null,'data':{}}",
 			"expectUserResponse": True,
 			"expectedInputs": [{
-				"inputPrompt": {
-					"initialPrompts": {	
-						"textToSpeech": "Hello! I am Orsen! What is your name?",
-						"displayText": "Hello! I am Orsen! What is your name?" + rawInput + ""
-					}
-				},
-				"possibleIntents": [{
-					"intent": "actions.intent.TEXT"
-				}]
+				#"inputPrompt": {
+				#	"initialPrompts": {	
+				#		"textToSpeech": "Hello! I am Orsen! What is your name?",
+				#		"displayText": "Hello! I am Orsen! What is your name?" + rawInput + ""
+				#	}
+				#},
+				#"possibleIntents": [{
+				#	"intent": "actions.intent.TEXT"
+				#}]
 			}]
 		}
 
