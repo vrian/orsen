@@ -13,7 +13,7 @@ def home():
 def orsen():
 
 	#jsonData = request.data
-	requestData = request.POST.get('data','')
+	requestData = request.data
 	
 	#rawTextQuery = requestData["inputs"]["rawInputs"]["query"]
 
