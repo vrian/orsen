@@ -24,7 +24,7 @@
   "conversations": {
     "welcome": {
       "name": "welcome",
-      "url": "https://orsen.herokuapp.com/orsen",
+      "url": "https://bdef3470.ngrok.io/orsen",
       "fulfillmentApiVersion": 2,
 	  "inDialogIntents": [
       {
@@ -34,7 +34,7 @@
     },
     "rawInput": {
       "name": "rawInput",
-      "url": "https://orsen.herokuapp.com/orsen",
+      "url": "https://bdef3470.ngrok.io/orsen",
       "fulfillmentApiVersion": 2,
 	  "inDialogIntents": [
       {

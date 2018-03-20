@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import jsonify
+from flask import request
 from flask import json
 import requests
 #import logging
@@ -10,39 +11,28 @@ app = Flask(__name__)
 #app.logger.setLevel(logging.DEBUG)
 #app.logger.debug('this will show in the log')
 
+storyId = 0
 
 @app.route('/', methods=["GET","POST"])
 def home():
+	print("HOME")
 	return jsonify({"Page":"Home"})
 	
-@app.route('/orsen/', methods=["GET","POST"])
+@app.route('/orsen', methods=["POST"])
 def orsen():
 
-	#jsonData = request.data
-	#if request.is_json:
-	#requestData = request.get_data()
-	#helllomehn = {}
+	print(json.dumps(request.get_json()))
+	requestJson = request.get_json()
 	
-	print("request")
-	#print(request)
-	print("getData()")
-	#print(request.getData)
-	print(".json")
-	print("")
-	
-	#if json.dumps(requestData) == "true":
-	#	hellomehn = request.json
-	
-	#rawTextQuery = requestData["inputs"]["rawInputs"]["query"]
+	rawTextQuery = requestJson["inputs"][0]["rawInputs"][0]["query"]
+	userId = requestJson["user"]["userId"]
 
-	if request.method == 'GET':
-		data = {"conversationToken":"{\"state\":null,\"data\":{}}","expectUserResponse":True,"expectedInputs":[{"inputPrompt":{"initialPrompts":[{"textToSpeech":"Hello! I am Orsen! What is your name?"+"requestData"+" regdrsfds"}],"noInputPrompts":[]},"possibleIntents":[{"intent":"actions.intent.TEXT"}]}]}
+	print(rawTextQuery + " ["+userId+"]")
 	
-	elif request.method == 'POST':
-		data = {"conversationToken":"{\"state\":null,\"data\":{}}","expectUserResponse":True,"expectedInputs":[{"inputPrompt":{"initialPrompts":[{"textToSpeech":"Hello! I am Orsen! What is your name?"+"POST"+""}],"noInputPrompts":[]},"possibleIntents":[{"intent":"actions.intent.TEXT"}]}]}
+	data = {"conversationToken":"{\"state\":null,\"data\":{}}","expectUserResponse":True,"expectedInputs":[{"inputPrompt":{"initialPrompts":[{"textToSpeech":"Hello! I am Orsen! What is your name?"+"POST"+""}],"noInputPrompts":[]},"possibleIntents":[{"intent":"actions.intent.TEXT"}]}]}
 	
 	
 	return jsonify(data)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug = True)
