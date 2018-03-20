@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import jsonify
-from flask import request
 from flask import json
+import requests
 #import logging
 app = Flask(__name__)
 
@@ -20,10 +20,15 @@ def orsen():
 
 	#jsonData = request.data
 	#if request.is_json:
-	requestData = request.get_data()
-	helllomehn = {}
+	#requestData = request.get_data()
+	#helllomehn = {}
 	
-	
+	print("request")
+	#print(request)
+	print("getData()")
+	#print(request.getData)
+	print(".json")
+	print("")
 	
 	#if json.dumps(requestData) == "true":
 	#	hellomehn = request.json
@@ -31,7 +36,7 @@ def orsen():
 	#rawTextQuery = requestData["inputs"]["rawInputs"]["query"]
 
 	if request.method == 'GET':
-		data = {"conversationToken":"{\"state\":null,\"data\":{}}","expectUserResponse":True,"expectedInputs":[{"inputPrompt":{"initialPrompts":[{"textToSpeech":"Hello! I am Orsen! What is your name?"+requestData["environ"]+" regdrsfds"}],"noInputPrompts":[]},"possibleIntents":[{"intent":"actions.intent.TEXT"}]}]}
+		data = {"conversationToken":"{\"state\":null,\"data\":{}}","expectUserResponse":True,"expectedInputs":[{"inputPrompt":{"initialPrompts":[{"textToSpeech":"Hello! I am Orsen! What is your name?"+"requestData"+" regdrsfds"}],"noInputPrompts":[]},"possibleIntents":[{"intent":"actions.intent.TEXT"}]}]}
 	
 	elif request.method == 'POST':
 		data = {"conversationToken":"{\"state\":null,\"data\":{}}","expectUserResponse":True,"expectedInputs":[{"inputPrompt":{"initialPrompts":[{"textToSpeech":"Hello! I am Orsen! What is your name?"+"POST"+""}],"noInputPrompts":[]},"possibleIntents":[{"intent":"actions.intent.TEXT"}]}]}
