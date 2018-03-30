@@ -1,0 +1,379 @@
+{
+  "archive": [
+    "archive.gz",
+    "84cc5c9869bfdc09072bb8d217d30c53",
+    "https://index.spacy.io/models/en-1.1.0/archive.gz"
+  ],
+  "etag": "7d928b8171ece380c29285d8e1bf7879",
+  "manifest": [
+    {
+      "checksum": [
+        "md5",
+        "6d0d4b6ab1c63bae1f643d74be45b58a"
+      ],
+      "noffset": 81,
+      "path": [
+        "tokenizer",
+        "prefix.txt"
+      ],
+      "size": 58
+    },
+    {
+      "checksum": [
+        "md5",
+        "0653ca64d24e3772ca226c0043a54d28"
+      ],
+      "noffset": 203,
+      "path": [
+        "tokenizer",
+        "suffix.txt"
+      ],
+      "size": 121
+    },
+    {
+      "checksum": [
+        "md5",
+        "b0e952a69870469e2c24a06a63b7b8b3"
+      ],
+      "noffset": 4766,
+      "path": [
+        "tokenizer",
+        "specials.json"
+      ],
+      "size": 57389
+    },
+    {
+      "checksum": [
+        "md5",
+        "f19ca88b84e10c13ce184587f23b291d"
+      ],
+      "noffset": 4852,
+      "path": [
+        "tokenizer",
+        "infix.txt"
+      ],
+      "size": 132
+    },
+    {
+      "checksum": [
+        "md5",
+        "43260460e916738695dca5ea58c25634"
+      ],
+      "noffset": 5466,
+      "path": [
+        "tokenizer",
+        "morphs.json"
+      ],
+      "size": 5456
+    },
+    {
+      "checksum": [
+        "md5",
+        "011a72e32df2c3c87817721c903cbb33"
+      ],
+      "noffset": 6023,
+      "path": [
+        "vocab",
+        "gazetteer.json"
+      ],
+      "size": 2744
+    },
+    {
+      "checksum": [
+        "md5",
+        "a5be0ac5dc3d9e07e5af33db25f2df1c"
+      ],
+      "noffset": 31023404,
+      "path": [
+        "vocab",
+        "lexemes.bin"
+      ],
+      "size": 83042240
+    },
+    {
+      "checksum": [
+        "md5",
+        "aef38bcb805c2ed4edf17ab9b208369e"
+      ],
+      "noffset": 31024046,
+      "path": [
+        "vocab",
+        "tag_map.json"
+      ],
+      "size": 2557
+    },
+    {
+      "checksum": [
+        "md5",
+        "39728b8675762177066dd16162baaf5c"
+      ],
+      "noffset": 31024084,
+      "path": [
+        "vocab",
+        "oov_prob"
+      ],
+      "size": 10
+    },
+    {
+      "checksum": [
+        "md5",
+        "a336ae975fbe608c72b5727610445c2e"
+      ],
+      "noffset": 226419131,
+      "path": [
+        "vocab",
+        "vec.bin"
+      ],
+      "size": 211519189
+    },
+    {
+      "checksum": [
+        "md5",
+        "24a5c128601ffc987b8aff10c8f8acff"
+      ],
+      "noffset": 226419335,
+      "path": [
+        "vocab",
+        "lemma_rules.json"
+      ],
+      "size": 633
+    },
+    {
+      "checksum": [
+        "md5",
+        "b0f18c32ef9d83b8214db66f516900b2"
+      ],
+      "noffset": 235404066,
+      "path": [
+        "vocab",
+        "strings.json"
+      ],
+      "size": 18811305
+    },
+    {
+      "checksum": [
+        "md5",
+        "5ead864c56cce491889180b161ae43a6"
+      ],
+      "noffset": 235452331,
+      "path": [
+        "vocab",
+        "serializer.json"
+      ],
+      "size": 190524
+    },
+    {
+      "checksum": [
+        "md5",
+        "cc7c42f987cb1c38ec80f5fb1e7f2e93"
+      ],
+      "noffset": 243140134,
+      "path": [
+        "pos",
+        "model"
+      ],
+      "size": 11799888
+    },
+    {
+      "checksum": [
+        "md5",
+        "00613ddd9d320b7a26cef788919cae7e"
+      ],
+      "noffset": 266495675,
+      "path": [
+        "ner",
+        "model"
+      ],
+      "size": 36553844
+    },
+    {
+      "checksum": [
+        "md5",
+        "5e6e9afbd65d1d13b9b6b3bb709694e0"
+      ],
+      "noffset": 266495905,
+      "path": [
+        "ner",
+        "config.json"
+      ],
+      "size": 1237
+    },
+    {
+      "checksum": [
+        "md5",
+        "f37b1a7e8ccaddb5a36d093ae6511052"
+      ],
+      "noffset": 556251621,
+      "path": [
+        "deps",
+        "model"
+      ],
+      "size": 444221600
+    },
+    {
+      "checksum": [
+        "md5",
+        "d4a5246448e378f1f211fd93bfa4d344"
+      ],
+      "noffset": 556251964,
+      "path": [
+        "deps",
+        "config.json"
+      ],
+      "size": 1450
+    },
+    {
+      "checksum": [
+        "md5",
+        "bb55705666a12253d15e332329e2b1f0"
+      ],
+      "noffset": 556490251,
+      "path": [
+        "wordnet",
+        "index.adj"
+      ],
+      "size": 824127
+    },
+    {
+      "checksum": [
+        "md5",
+        "f6e4bd2b3473a5e40a749719c2268846"
+      ],
+      "noffset": 556508918,
+      "path": [
+        "wordnet",
+        "sentidx.vrb"
+      ],
+      "size": 73166
+    },
+    {
+      "checksum": [
+        "md5",
+        "ef3e1c35234edb8d7394c75f4b344c70"
+      ],
+      "noffset": 556514986,
+      "path": [
+        "wordnet",
+        "adj.exc"
+      ],
+      "size": 23019
+    },
+    {
+      "checksum": [
+        "md5",
+        "191515ffba85d4461d37f93059de2840"
+      ],
+      "noffset": 556516925,
+      "path": [
+        "wordnet",
+        "sents.vrb"
+      ],
+      "size": 5319
+    },
+    {
+      "checksum": [
+        "md5",
+        "fa5c7d42ec3214777011eabd13f34bc9"
+      ],
+      "noffset": 556517242,
+      "path": [
+        "wordnet",
+        "frames.vrb"
+      ],
+      "size": 1125
+    },
+    {
+      "checksum": [
+        "md5",
+        "8c949e6ef352295997b09e2446364e43"
+      ],
+      "noffset": 557891009,
+      "path": [
+        "wordnet",
+        "index.noun"
+      ],
+      "size": 4786655
+    },
+    {
+      "checksum": [
+        "md5",
+        "fa5c7d42ec3214777011eabd13f34bc9"
+      ],
+      "noffset": 557891326,
+      "path": [
+        "wordnet",
+        "verb.Framestext"
+      ],
+      "size": 1125
+    },
+    {
+      "checksum": [
+        "md5",
+        "98636a3c14d26002264d352ea57d713a"
+      ],
+      "noffset": 558062212,
+      "path": [
+        "wordnet",
+        "index.verb"
+      ],
+      "size": 523980
+    },
+    {
+      "checksum": [
+        "md5",
+        "951700d36c2c84a20fda9550028dc7cc"
+      ],
+      "noffset": 558075491,
+      "path": [
+        "wordnet",
+        "noun.exc"
+      ],
+      "size": 38301
+    },
+    {
+      "checksum": [
+        "md5",
+        "d8016b74fcb68ef5139a4c51d22bdbdf"
+      ],
+      "noffset": 558086414,
+      "path": [
+        "wordnet",
+        "verb.exc"
+      ],
+      "size": 38033
+    },
+    {
+      "checksum": [
+        "md5",
+        "a55bf29bc2f59e33ea31568874f6a294"
+      ],
+      "noffset": 558132762,
+      "path": [
+        "wordnet",
+        "index.adv"
+      ],
+      "size": 162816
+    },
+    {
+      "checksum": [
+        "md5",
+        "c0d9112ae92a3ce3a149541c16c0386a"
+      ],
+      "noffset": 558132844,
+      "path": [
+        "wordnet",
+        "adv.exc"
+      ],
+      "size": 85
+    }
+  ],
+  "package": {
+    "compatibility": {
+      "spacy": null
+    },
+    "description": "default English model",
+    "license": "public domain",
+    "name": "en",
+    "version": "1.1.0"
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "archive": [
+    "archive.gz",
+    "5743a1e2eedf1ab17d6727cc36474350",
+    "https://index.spacy.io/models/de-1.0.0/archive.gz"
+  ],
+  "etag": "707615c7822e5fdba0c9047d7c864f48",
+  "manifest": [
+    {
+      "checksum": [
+        "md5",
+        "d5ccd1e80f86f2aaed45852a6f96431b"
+      ],
+      "noffset": 474,
+      "path": [
+        "tokenizer",
+        "morphs.json"
+      ],
+      "size": 5547
+    },
+    {
+      "checksum": [
+        "md5",
+        "5f9a0606dcca7d370b53f8688172e260"
+      ],
+      "noffset": 2431,
+      "path": [
+        "tokenizer",
+        "specials.json"
+      ],
+      "size": 19644
+    },
+    {
+      "checksum": [
+        "md5",
+        "eb53b821573fc825fe6e3dab30deaa65"
+      ],
+      "noffset": 2722,
+      "path": [
+        "tokenizer",
+        "suffix.txt"
+      ],
+      "size": 704
+    },
+    {
+      "checksum": [
+        "md5",
+        "23fd17610577b16b301471f9d5c1f01a"
+      ],
+      "noffset": 2816,
+      "path": [
+        "tokenizer",
+        "infix.txt"
+      ],
+      "size": 253
+    },
+    {
+      "checksum": [
+        "md5",
+        "dcb7396c74efad54514cade939137bb5"
+      ],
+      "noffset": 2913,
+      "path": [
+        "tokenizer",
+        "prefix.txt"
+      ],
+      "size": 76
+    },
+    {
+      "checksum": [
+        "md5",
+        "011a72e32df2c3c87817721c903cbb33"
+      ],
+      "noffset": 3470,
+      "path": [
+        "vocab",
+        "gazetteer.json"
+      ],
+      "size": 2744
+    },
+    {
+      "checksum": [
+        "md5",
+        "696e7b145053c8bf56ac123aad27e2d9"
+      ],
+      "noffset": 4075,
+      "path": [
+        "vocab",
+        "tag_map.json"
+      ],
+      "size": 2562
+    },
+    {
+      "checksum": [
+        "md5",
+        "b82d48a94e599e87b298653284231227"
+      ],
+      "noffset": 371067318,
+      "path": [
+        "vocab",
+        "vec.bin"
+      ],
+      "size": 402368326
+    },
+    {
+      "checksum": [
+        "md5",
+        "bd406e3821dd4687811e3bca7e12c72c"
+      ],
+      "noffset": 406648168,
+      "path": [
+        "vocab",
+        "strings.json"
+      ],
+      "size": 75745546
+    },
+    {
+      "checksum": [
+        "md5",
+        "8f7ba20695b6dde7383115d268efbbde"
+      ],
+      "noffset": 523214889,
+      "path": [
+        "vocab",
+        "lexemes.bin"
+      ],
+      "size": 313042880
+    },
+    {
+      "checksum": [
+        "md5",
+        "8a80554c91d9fca8acb82f023de02f11"
+      ],
+      "noffset": 523214920,
+      "path": [
+        "vocab",
+        "lemma_rules.json"
+      ],
+      "size": 3
+    },
+    {
+      "checksum": [
+        "md5",
+        "6458464184282c21158fcc1c2a36c7fb"
+      ],
+      "noffset": 523264517,
+      "path": [
+        "vocab",
+        "serializer.json"
+      ],
+      "size": 231387
+    },
+    {
+      "checksum": [
+        "md5",
+        "ae7dbcc248a3e65fdc008b031193dd02"
+      ],
+      "noffset": 523264555,
+      "path": [
+        "vocab",
+        "oov_prob"
+      ],
+      "size": 10
+    },
+    {
+      "checksum": [
+        "md5",
+        "87c49997ef4bda3c5b039ebc7a2132e2"
+      ],
+      "noffset": 527444665,
+      "path": [
+        "pos",
+        "model"
+      ],
+      "size": 6501888
+    },
+    {
+      "checksum": [
+        "md5",
+        "8b1f486ad0e70bdad8cb06f22e8760b0"
+      ],
+      "noffset": 536030889,
+      "path": [
+        "ner",
+        "model"
+      ],
+      "size": 14026868
+    },
+    {
+      "checksum": [
+        "md5",
+        "3d6c526049aab10ea09937c3db1949a9"
+      ],
+      "noffset": 536031017,
+      "path": [
+        "ner",
+        "config.json"
+      ],
+      "size": 289
+    },
+    {
+      "checksum": [
+        "md5",
+        "def4d4cc42b9f6ab43451df5148c0035"
+      ],
+      "noffset": 675527751,
+      "path": [
+        "deps",
+        "model"
+      ],
+      "size": 213123312
+    },
+    {
+      "checksum": [
+        "md5",
+        "d26c19538f294151d5454938ca2bcb1d"
+      ],
+      "noffset": 675528239,
+      "path": [
+        "deps",
+        "config.json"
+      ],
+      "size": 2921
+    }
+  ],
+  "package": {
+    "compatibility": {
+      "spacy": null
+    },
+    "description": "default German model",
+    "license": "public domain",
+    "name": "de",
+    "version": "1.0.0"
+  }
+}
