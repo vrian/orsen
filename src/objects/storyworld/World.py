@@ -1,24 +1,19 @@
 from operator import attrgetter
 class World:
 
-    # WORLD ELEMENTS
-
-    id = -1
-    characters = {}
-    objects = {}
-    relationships = {}
-    settings = {}
-    event_chain = []
-
-    # RESPONSE ELEMENTS
-
-    # stored as moves
-    reponses = []
-
-    empty_response = 0
-
     def __init__(self, id="-1"):
         self.id = id
+
+        # WORLD ELEMENTS
+        self.characters = {}
+        self.objects = {}
+        self.relationships = {}
+        self.settings = {}
+        self.event_chain = []
+
+        # RESPONSE ELEMENTS
+        self.reponses = []
+        self.empty_response = 0
 
     def add_character(self, char):
         if char.id not in self.objects and char.id not in self.characters:
@@ -75,7 +70,7 @@ class World:
 
         return sorted_list[:num_of_charas]
 
-    def get_main_objects(self, rank=0):
+    def get_main_object(self, rank=0):
         sorted_list = sorted(self.objects.values(), key=attrgetter('timesMentioned'), reverse=True)
         final = [sorted_list[rank]]
 
@@ -87,4 +82,8 @@ class World:
 
     def get_top_objects(self, num_of_charas=3):
         sorted_list = sorted(self.objects.values(), key=attrgetter('timesMentioned'), reverse=True)
+
+        if len(sorted_list) > num_of_charas:
+            num_of_charas = len(sorted_list)
+
         return sorted_list[:num_of_charas]

@@ -15,16 +15,52 @@
 			"call Orsen",
 			"let me talk to Orson",
             "talk to Orson",
-			"call Orson"
+			"call Orson",
+			"let me talk to Arson",
+            "talk to Arson",
+			"call Arson",
+			"let me talk to Arsen",
+            "talk to Arsen",
+			"call Arsen",
+			"I want to tell a story",
+			"I want to make a story",
+			"I like to make a story",
+			"I like to tell a story"
           ]
         }
       }
-    }
+    },
+	{
+         "description":"give me an idea",
+         "name":"GIVE_IDEA_ORSEN",
+         "fulfillment":{
+            "conversationName":"conversation_1"
+         },
+         "intent":{
+            "name":"actions.intent.GIVE_IDEA_ORSEN",
+			"trigger": {
+          "queryPatterns": [
+		  "arson, give me an idea",
+			"arson, I am stuck",
+			"arson, help me",
+			"orsen, give me an idea",
+			"orsen, I am stuck",
+			"orsen, help me",
+			"arsen, give me an idea",
+			"arsen, I am stuck",
+			"arsen, help me",
+			"give me an idea",
+			"I am stuck",
+			"help me"
+          ]
+        }
+         }
+      }
   ],
   "conversations": {
     "welcome": {
       "name": "welcome",
-      "url": "https://66ee17b9.ngrok.io/orsen",
+      "url": "https://a9cf0237.ngrok.io/orsen",
       "fulfillmentApiVersion": 2,
 	  "inDialogIntents": [
       {
@@ -34,7 +70,7 @@
     },
     "rawInput": {
       "name": "rawInput",
-      "url": "https://66ee17b9.ngrok.io/orsen",
+      "url": "https://a9cf0237.ngrok.io/orsen",
       "fulfillmentApiVersion": 2,
 	  "inDialogIntents": [
       {

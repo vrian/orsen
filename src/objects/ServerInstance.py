@@ -24,6 +24,9 @@ class ServerInstance(object):
             else:
                 return False
 
+        def get_world(self, id):
+            return self.worlds.get(id)
+
     instance = None
 
     def __init__(self):

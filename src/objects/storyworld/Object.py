@@ -2,12 +2,12 @@ class Object:
 
     id = ""
     name = ""
-    type = ""
-    inSetting = 0
+    type = []
+    inSetting = {}
     timesMentioned = 0
     attributes = []
 
-    def __init__(self, id="", name="", type="", inSetting=0, times=1, attr=[]):
+    def __init__(self, id="", name="", type=[], inSetting=0, times=1, attr=[]):
         self.id   = id
         self.name       = name
         self.type       = type

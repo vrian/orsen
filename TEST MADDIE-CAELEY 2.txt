@@ -1,0 +1,5472 @@
+Microsoft Windows [Version 10.0.17134.48]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\Bryan>cd documents/projects/orsen
+
+C:\Users\Bryan\Documents\Projects\Orsen>orsen.py
+Traceback (most recent call last):
+  File "C:\Users\Bryan\Documents\Projects\Orsen\orsen.py", line 1, in <module>
+    from src.run import extract_info, new_world
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\run.py", line 1, in <module>
+    import spacy
+ModuleNotFoundError: No module named 'spacy'
+
+C:\Users\Bryan\Documents\Projects\Orsen>cd venv/scripts
+
+C:\Users\Bryan\Documents\Projects\Orsen\venv\Scripts>activate
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen\venv\Scripts>cd../..
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>orsen.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-257-480
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [26/May/2018 09:49:48] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+rhfgh
+---POS----
+rhfgh rhfgh rhfgh NOUN NN ROOT
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  rhfgh
+current index:  0
+oops
+['rhfgh']
+rhfgh
+---POS----
+rhfgh rhfgh rhfgh NOUN NN ROOT
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj [] Obj_Action [] LOC []
+{}
+{}
+127.0.0.1 - - [26/May/2018 09:49:56] "[1m[35mPOST /orsen HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\orsen.py", line 108, in orsen
+    retrieved = retrieve_output(rawTextQuery, storyId)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DialoguePlanner.py", line 94, in retrieve_output
+    output = generate_response(choice, world, [], coreferenced_text)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DialoguePlanner.py", line 136, in generate_response
+    pre_choices = DBO_Move.get_templates_of_type(DBO_Move.TYPE_FEEDBACK)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DBO_Move.py", line 69, in get_templates_of_type
+    conn = SqlConnConcepts.get_connection()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\db\SqlConnector.py", line 35, in get_connection
+    SqlConnConcepts.schema)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 699, in __init__
+    self.connect()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 936, in connect
+    self._request_authentication()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 1156, in _request_authentication
+    auth_packet = self._read_packet()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+ * Detected change in 'C:\\Users\\Bryan\\Documents\\Projects\\Orsen\\src\\db\\SqlConnector.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-257-480
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Detected change in 'C:\\Users\\Bryan\\Documents\\Projects\\Orsen\\src\\db\\SqlConnector.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-257-480
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [26/May/2018 09:51:55] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+hi
+---POS----
+hi hi hi INTJ UH ROOT
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  hi
+current index:  0
+oops
+['hi']
+hi
+---POS----
+hi hi hi INTJ UH ROOT
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj [] Obj_Action [] LOC []
+{}
+{}
+I:  hi
+O:  Then what happens?
+127.0.0.1 - - [26/May/2018 09:52:03] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+winfred is good
+---POS----
+winfred is winfr VERB VBN csubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+good is good ADJ JJ acomp
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  winfred is good
+current index:  0
+oops
+['winfred is good']
+winfred is good
+---POS----
+winfred is winfr VERB VBN csubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+good is good ADJ JJ acomp
+WARNING: Dependecy  csubj  not included in the list
+CHILD acomp
+LIST OF ATTR ['good']
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['good'] Obj_Action [] LOC []
+{}
+{}
+I:  winfred is good
+O:  Oh I see!
+127.0.0.1 - - [26/May/2018 09:52:16] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 09:52:24] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 09:55:01] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:16:18] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+you gotta be closed
+---POS----
+you got -PRON- PRON PRP nsubj
+---POS----
+got got get VERB VBD ROOT
+---POS----
+ta be to PART TO aux
+---POS----
+be got be VERB VB xcomp
+---POS----
+closed be close VERB VBN acomp
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+returned:  you gotta be closed
+current index:  0
+oops
+['you gotta be closed']
+you gotta be closed
+---POS----
+you got -PRON- PRON PRP nsubj
+---POS----
+got got get VERB VBD ROOT
+---POS----
+ta be to PART TO aux
+---POS----
+be got be VERB VB xcomp
+---POS----
+closed be close VERB VBN acomp
+CHILD nsubj
+ADDED you
+CHILD xcomp
+ENTERING 0
+WARNING: Dependecy  aux  not included in the list
+CHILD acomp
+LIST OF ATTR ['closed']
+ADD closed TO you
+-------------- Entering EVENT EXTRACTION -----------------
+head_char you
+HOLDCHAR ['you']
+event_char ['you']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['you'] Char_Action ['got'] Obj ['ta be'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+I:  you gotta be closed
+O:  I see, that's interesting.
+127.0.0.1 - - [26/May/2018 10:16:34] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:16:42] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:16:57] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+she was 16 years old
+---POS----
+she was -PRON- PRON PRP nsubj
+---POS----
+was was be VERB VBD ROOT
+---POS----
+16 years 16 NUM CD nummod
+---POS----
+years old year NOUN NNS npadvmod
+---POS----
+old was old ADJ JJ acomp
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+returned:  she was 16 years old
+current index:  0
+oops
+['she was 16 years old']
+she was 16 years old
+---POS----
+she was -PRON- PRON PRP nsubj
+---POS----
+was was be VERB VBD ROOT
+---POS----
+16 years 16 NUM CD nummod
+---POS----
+years old year NOUN NNS npadvmod
+---POS----
+old was old ADJ JJ acomp
+CHILD nsubj
+ADDED she
+CHILD acomp
+LIST OF ATTR ['old']
+ADD old TO she
+CHILD npadvmod
+ERROR: Cannot find current index or node  npadvmod  has been recorded
+-------------- Entering EVENT EXTRACTION -----------------
+head_char she
+HOLDCHAR ['she']
+event_char ['she']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [1] Char ['she'] Char_Action ['was'] Obj ['old'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+I:  she was 16 years old
+O:  Tell me more then.
+127.0.0.1 - - [26/May/2018 10:17:06] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:17:17] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+What if knife can cut steak.
+---POS----
+What cut what NOUN WP dobj
+---POS----
+if cut if ADP IN mark
+---POS----
+knife cut knife NOUN NN nsubj
+---POS----
+can cut can VERB MD aux
+---POS----
+cut cut cut VERB VB ROOT
+---POS----
+steak cut steak NOUN NN dobj
+---POS----
+. cut . PUNCT . punct
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  What if knife can cut steak.
+current index:  0
+oops
+['What if knife can cut steak.']
+What if knife can cut steak.
+---POS----
+What cut what NOUN WP dobj
+---POS----
+if cut if ADP IN mark
+---POS----
+knife cut knife NOUN NN nsubj
+---POS----
+can cut can VERB MD aux
+---POS----
+cut cut cut VERB VB ROOT
+---POS----
+steak cut steak NOUN NN dobj
+---POS----
+. cut . PUNCT . punct
+CHILD dobj
+ADDED what
+WARNING: Dependecy  mark  not included in the list
+CHILD nsubj
+ADDED knife
+WARNING: Dependecy  aux  not included in the list
+CHILD dobj
+ADDED steak
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+head_char knife
+HOLDCHAR ['knife']
+event_char ['knife']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['knife'] Char_Action ['can cut'] Obj ['what'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+127.0.0.1 - - [26/May/2018 10:17:32] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:17:44] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:19:37] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+once upon a time
+---POS----
+once once once ADV RB ROOT
+---POS----
+upon once upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  once upon a time
+current index:  0
+oops
+['once upon a time']
+once upon a time
+---POS----
+once once once ADV RB ROOT
+---POS----
+upon once upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+WARNING: Dependecy  det  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['time'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  once upon a time
+O:  Oh I see!
+127.0.0.1 - - [26/May/2018 10:19:53] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:20:04] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:20:19] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+What if ocean can swim in.
+---POS----
+What swim what NOUN WP pobj
+---POS----
+if swim if ADP IN mark
+---POS----
+ocean swim ocean NOUN NN nsubj
+---POS----
+can swim can VERB MD aux
+---POS----
+swim swim swim VERB VB ROOT
+---POS----
+in swim in PART RP prt
+---POS----
+. swim . PUNCT . punct
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  What if ocean can swim in.
+current index:  0
+oops
+['What if ocean can swim in.']
+What if ocean can swim in.
+---POS----
+What swim what NOUN WP pobj
+---POS----
+if swim if ADP IN mark
+---POS----
+ocean swim ocean NOUN NN nsubj
+---POS----
+can swim can VERB MD aux
+---POS----
+swim swim swim VERB VB ROOT
+---POS----
+in swim in PART RP prt
+---POS----
+. swim . PUNCT . punct
+WARNING: Dependecy  mark  not included in the list
+CHILD nsubj
+ADDED ocean
+WARNING: Dependecy  aux  not included in the list
+WARNING: Dependecy  prt  not included in the list
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+head_char ocean
+HOLDCHAR ['ocean']
+event_char ['ocean']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['ocean'] Char_Action ['can swim'] Obj ['what'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+127.0.0.1 - - [26/May/2018 10:20:40] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:31:41] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+once upon a time there was a girl
+---POS----
+once was once ADV RB advmod
+---POS----
+upon was upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+---POS----
+there was there ADV EX expl
+---POS----
+was was be VERB VBD ROOT
+---POS----
+a girl a DET DT det
+---POS----
+girl was girl NOUN NN attr
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  once upon a time there was a girl
+current index:  0
+oops
+['once upon a time there was a girl']
+once upon a time there was a girl
+---POS----
+once was once ADV RB advmod
+---POS----
+upon was upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+---POS----
+there was there ADV EX expl
+---POS----
+was was be VERB VBD ROOT
+---POS----
+a girl a DET DT det
+---POS----
+girl was girl NOUN NN attr
+CHILD advmod
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  expl  not included in the list
+CHILD attr
+ADDED girl
+LIST OF ATTR ['girl']
+WARNING: Dependecy  det  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['once'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  once upon a time there was a girl
+O:  I see, that's interesting.
+127.0.0.1 - - [26/May/2018 10:31:56] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:32:09] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+on the island with her mom and dad and one brother
+---POS----
+on on on ADP IN ROOT
+---POS----
+the island the DET DT det
+---POS----
+island on island NOUN NN pobj
+---POS----
+with island with ADP IN prep
+---POS----
+her mom -PRON- ADJ PRP$ poss
+---POS----
+mom with mom NOUN NN pobj
+---POS----
+and mom and CCONJ CC cc
+---POS----
+dad mom dad NOUN NN conj
+---POS----
+and mom and CCONJ CC cc
+---POS----
+one brother one NUM CD nummod
+---POS----
+brother mom brother NOUN NN conj
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {0: 2.27936830020659, 1: 1.5619696009627813, 2: -0.5357969663421533, 3: 1.5523867374642566, 4: 1.8356367517321845, 5: 1.764522830310705, 6: 1.7360058614685752}, 'pair_scores': {0: {}, 1: {0: -1.6647067606449624}, 2: {0: -1.6014411779274487, 1: -1.6798783725667497}, 3: {0: -1.500027312571852, 1: -1.5603804049585763, 2: -1.661237334969226}, 4: {0: -1.5046169910935658, 1: -1.6001487422010117, 2: -1.764746457865429, 3: -1.5355715645750585}, 5: {0: -1.5087509015031424, 1: -1.5360963688322518, 2: -1.7701585391850774, 3: -1.5229708542472258, 4: -1.5523895559459575}, 6: {0: -1.5075134120557552, 1: -1.5767838122522988, 2: -2.2722448114242515, 3: -1.5110769381001277, 4: -1.5459855780149967, 5: -1.4957400748384129}}}
+[the island with her mom and dad and one brother] [her]
+returned:  on the island with her mom and dad and one brother
+current index:  0
+oops
+['on the island with her mom and dad and one brother']
+on the island with her mom and dad and one brother
+---POS----
+on on on ADP IN ROOT
+---POS----
+the island the DET DT det
+---POS----
+island on island NOUN NN pobj
+---POS----
+with island with ADP IN prep
+---POS----
+her mom -PRON- ADJ PRP$ poss
+---POS----
+mom with mom NOUN NN pobj
+---POS----
+and mom and CCONJ CC cc
+---POS----
+dad mom dad NOUN NN conj
+---POS----
+and mom and CCONJ CC cc
+---POS----
+one brother one NUM CD nummod
+---POS----
+brother mom brother NOUN NN conj
+ADDED island
+WARNING: Dependecy  det  not included in the list
+ADDED mom
+ADDED her
+LIST OF ATTR ['mom', 'dad']
+ADD mom TO her
+ADD dad TO her
+ADDED dad
+WARNING: Dependecy  poss  not included in the list
+WARNING: Dependecy  cc  not included in the list
+WARNING: Dependecy  ROOT  not included in the list
+WARNING: Dependecy  cc  not included in the list
+WARNING: Dependecy  nummod  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['island'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 1
+ attributes: %s[]
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>]
+attr Has mom
+attr Has dad
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  on the island with her mom and dad and one brother
+O:  Tell me more about ocean.
+127.0.0.1 - - [26/May/2018 10:32:22] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+my love to go to the ocean to love to politicians
+---POS----
+my love -PRON- ADJ PRP$ poss
+---POS----
+love love love NOUN NN ROOT
+---POS----
+to go to PART TO aux
+---POS----
+go love go VERB VB acl
+---POS----
+to go to ADP IN prep
+---POS----
+the ocean the DET DT det
+---POS----
+ocean to ocean NOUN NN pobj
+---POS----
+to love to PART TO aux
+---POS----
+love go love VERB VB advcl
+---POS----
+to love to ADP IN prep
+---POS----
+politicians to politician NOUN NNS pobj
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+OWN CODE
+['my', 'love', 'to', 'go', 'to', 'the', 'ocean', 'to', 'love', 'to', 'politicians']
+poss check pron ADJ
+poss check pron ADJ
+poss check pron ADJ
+returned:  love love to go to the ocean to love to politicians
+current index:  0
+oops
+['love love to go to the ocean to love to politicians']
+love love to go to the ocean to love to politicians
+---POS----
+love love love NOUN NN ROOT
+---POS----
+love love love NOUN NN dobj
+---POS----
+to go to PART TO aux
+---POS----
+go love go VERB VB advcl
+---POS----
+to go to ADP IN prep
+---POS----
+the ocean the DET DT det
+---POS----
+ocean to ocean NOUN NN pobj
+---POS----
+to love to PART TO aux
+---POS----
+love go love VERB VB advcl
+---POS----
+to love to ADP IN prep
+---POS----
+politicians to politician NOUN NNS pobj
+CHILD dobj
+ADDED love
+WARNING: Dependecy  aux  not included in the list
+WARNING: Dependecy  aux  not included in the list
+WARNING: Dependecy  aux  not included in the list
+WARNING: Dependecy  aux  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['love'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 1
+ attributes: %s[]
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>]
+attr Has mom
+attr Has dad
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  my love to go to the ocean to love to politicians
+O:  I want to know more.
+127.0.0.1 - - [26/May/2018 10:32:37] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:32:50] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+What if watermelon is part of a watermelon.
+---POS----
+What is what NOUN WP dep
+---POS----
+if is if ADP IN mark
+---POS----
+watermelon is watermelon NOUN NN nsubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+part is part NOUN NN attr
+---POS----
+of part of ADP IN prep
+---POS----
+a watermelon a DET DT det
+---POS----
+watermelon of watermelon NOUN NN pobj
+---POS----
+. is . PUNCT . punct
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  What if watermelon is part of a watermelon.
+current index:  0
+oops
+['What if watermelon is part of a watermelon.']
+What if watermelon is part of a watermelon.
+---POS----
+What is what NOUN WP dep
+---POS----
+if is if ADP IN mark
+---POS----
+watermelon is watermelon NOUN NN nsubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+part is part NOUN NN attr
+---POS----
+of part of ADP IN prep
+---POS----
+a watermelon a DET DT det
+---POS----
+watermelon of watermelon NOUN NN pobj
+---POS----
+. is . PUNCT . punct
+WARNING: Dependecy  dep  not included in the list
+WARNING: Dependecy  mark  not included in the list
+CHILD nsubj
+ADDED watermelon
+CHILD attr
+ADDED part
+LIST OF ATTR ['part']
+ADD part TO watermelon
+RELATION IsA
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+head_char watermelon
+HOLDCHAR ['watermelon']
+event_char ['watermelon']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [1] Char ['watermelon'] Char_Action ['is'] Obj ['part'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 1
+ attributes: %s[]
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>]
+attr Has mom
+attr Has dad
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+127.0.0.1 - - [26/May/2018 10:33:04] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+understanding
+---POS----
+understanding understanding understanding NOUN NN ROOT
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  understanding
+current index:  0
+oops
+['understanding']
+understanding
+---POS----
+understanding understanding understanding NOUN NN ROOT
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj [] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 1
+ attributes: %s[]
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>]
+attr Has mom
+attr Has dad
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  understanding
+O:  Tell me more then.
+127.0.0.1 - - [26/May/2018 10:33:17] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:33:23] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:33:40] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:33:47] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:34:16] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+once upon a time there was a girl named nikki
+---POS----
+once was once ADV RB advmod
+---POS----
+upon was upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+---POS----
+there was there ADV EX expl
+---POS----
+was was be VERB VBD ROOT
+---POS----
+a girl a DET DT det
+---POS----
+girl was girl NOUN NN attr
+---POS----
+named girl name VERB VBN acl
+---POS----
+nikki named nikki NOUN NN oprd
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  once upon a time there was a girl named nikki
+current index:  0
+oops
+['once upon a time there was a girl named nikki']
+once upon a time there was a girl named nikki
+---POS----
+once was once ADV RB advmod
+---POS----
+upon was upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+---POS----
+there was there ADV EX expl
+---POS----
+was was be VERB VBD ROOT
+---POS----
+a girl a DET DT det
+---POS----
+girl was girl NOUN NN attr
+---POS----
+named girl name VERB VBN acl
+---POS----
+nikki named nikki NOUN NN oprd
+CHILD advmod
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  expl  not included in the list
+CHILD attr
+LIST OF ATTR ['girl']
+WARNING: Dependecy  det  not included in the list
+LIST OF ATTR ['nikki']
+ADD nikki TO girl
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['once'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>]
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>]
+attr Has mom
+attr Has dad
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  once upon a time there was a girl named nikki
+O:  I want to hear more about part.
+127.0.0.1 - - [26/May/2018 10:34:29] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:35:27] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+once upon a time there was a girl named nikki
+---POS----
+once was once ADV RB advmod
+---POS----
+upon was upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+---POS----
+there was there ADV EX expl
+---POS----
+was was be VERB VBD ROOT
+---POS----
+a girl a DET DT det
+---POS----
+girl was girl NOUN NN attr
+---POS----
+named girl name VERB VBN acl
+---POS----
+nikki named nikki NOUN NN oprd
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  once upon a time there was a girl named nikki
+current index:  0
+oops
+['once upon a time there was a girl named nikki']
+once upon a time there was a girl named nikki
+---POS----
+once was once ADV RB advmod
+---POS----
+upon was upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+---POS----
+there was there ADV EX expl
+---POS----
+was was be VERB VBD ROOT
+---POS----
+a girl a DET DT det
+---POS----
+girl was girl NOUN NN attr
+---POS----
+named girl name VERB VBN acl
+---POS----
+nikki named nikki NOUN NN oprd
+CHILD advmod
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  expl  not included in the list
+CHILD attr
+LIST OF ATTR ['girl']
+WARNING: Dependecy  det  not included in the list
+LIST OF ATTR ['nikki']
+ADD nikki TO girl
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['once'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>]
+attr Has mom
+attr Has dad
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+Bob is artist.
+---POS----
+Bob is bob PROPN NNP nsubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+artist is artist ADJ JJ acomp
+---POS----
+. is . PUNCT . punct
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  Bob is artist.
+current index:  0
+oops
+['Bob is artist.']
+Bob is artist.
+---POS----
+Bob is bob PROPN NNP nsubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+artist is artist ADJ JJ acomp
+---POS----
+. is . PUNCT . punct
+CHILD nsubj
+ADDED bob
+CHILD acomp
+LIST OF ATTR ['artist']
+ADD artist TO bob
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+head_char bob
+HOLDCHAR ['bob']
+event_char ['bob']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [1] Char ['bob'] Char_Action ['is'] Obj ['artist'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>]
+attr Has mom
+attr Has dad
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  once upon a time there was a girl named nikki
+O:  Bob is artist.
+127.0.0.1 - - [26/May/2018 10:35:44] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+asiana friendly brandon
+---POS----
+asiana brandon asiana VERB VB nmod
+---POS----
+friendly brandon friendly ADJ JJ amod
+---POS----
+brandon brandon brandon NOUN NN ROOT
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  asiana friendly brandon
+current index:  0
+oops
+['asiana friendly brandon']
+asiana friendly brandon
+---POS----
+asiana brandon asiana VERB VB nmod
+---POS----
+friendly brandon friendly ADJ JJ amod
+---POS----
+brandon brandon brandon NOUN NN ROOT
+WARNING: Dependecy  nmod  not included in the list
+WARNING: Dependecy  amod  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj [] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>]
+attr Has mom
+attr Has dad
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  asiana friendly brandon
+O:  Tell me more then.
+127.0.0.1 - - [26/May/2018 10:35:54] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+pause had an anime that wanted to steal her friend
+---POS----
+pause had pause NOUN NN nsubj
+---POS----
+had had have VERB VBD ROOT
+---POS----
+an anime an DET DT det
+---POS----
+anime had anime NOUN NN dobj
+---POS----
+that wanted that ADJ WDT nsubj
+---POS----
+wanted anime want VERB VBD relcl
+---POS----
+to steal to PART TO aux
+---POS----
+steal wanted steal VERB VB xcomp
+---POS----
+her friend -PRON- ADJ PRP$ poss
+---POS----
+friend steal friend NOUN NN dobj
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+OWN CODE
+['pause', 'had', 'an', 'anime', 'that', 'wanted', 'to', 'steal', 'her', 'friend']
+nsubj check prop or noun NOUN
+poss check pron ADJ
+poss check pron ADJ
+poss check pron ADJ
+returned:  pause had an anime that wanted to steal pause's friend
+current index:  0
+oops
+["pause had an anime that wanted to steal pause's friend"]
+pause had an anime that wanted to steal pause's friend
+---POS----
+pause had pause NOUN NN nsubj
+---POS----
+had had have VERB VBD ROOT
+---POS----
+an anime an DET DT det
+---POS----
+anime had anime NOUN NN dobj
+---POS----
+that wanted that ADJ WDT nsubj
+---POS----
+wanted anime want VERB VBD relcl
+---POS----
+to steal to PART TO aux
+---POS----
+steal wanted steal VERB VB xcomp
+---POS----
+pause friend pause NOUN NN poss
+---POS----
+'s pause 's PART POS case
+---POS----
+friend steal friend NOUN NN dobj
+CHILD nsubj
+ADDED pause
+CHILD dobj
+ADDED anime
+WARNING: Dependecy  det  not included in the list
+CHILD relcl
+CHILD nsubj
+ADDED that
+CHILD xcomp
+ENTERING 0
+WARNING: Dependecy  aux  not included in the list
+CHILD dobj
+ADDED friend
+LIST OF ATTR ['friend']
+ADD friend TO pause
+-------------- Entering EVENT EXTRACTION -----------------
+head_char pause
+HOLDCHAR ['pause']
+event_char ['pause']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>, <src.objects.eventchain.EventFrame.EventFrame object at 0x18914550>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:pause
+D-ACTIONS:pause:had
+REC:anime
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['pause'] Char_Action ['had'] Obj ['anime'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>, 'pause': <src.objects.storyworld.Object.Object object at 0x18914EF0>, 'anime': <src.objects.storyworld.Object.Object object at 0x189148D0>, 'that': <src.objects.storyworld.Object.Object object at 0x189142B0>, 'friend': <src.objects.storyworld.Object.Object object at 0x18914FF0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>]
+attr Has mom
+attr Has dad
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+OBJECT pause:
+Name: pause
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x18914BB0>]
+attr CapableOf have False
+attr Has friend
+OBJECT anime:
+Name: anime
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x189145D0>]
+attr ReceivedAction want False
+OBJECT that:
+Name: that
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914C50>, <src.objects.storyworld.Attribute.Attribute object at 0x18914410>]
+attr ReceivedAction want False
+attr CapableOf steal False
+OBJECT friend:
+Name: friend
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  pause had an anime that wanted to steal her friend
+O:  I want to know more.
+127.0.0.1 - - [26/May/2018 10:36:04] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+so her enemy got her diary and read all the stories about and told the principal
+---POS----
+so got so ADP IN advmod
+---POS----
+her enemy -PRON- ADJ PRP$ poss
+---POS----
+enemy got enemy NOUN NN nsubj
+---POS----
+got got get VERB VBD ROOT
+---POS----
+her diary -PRON- ADJ PRP$ poss
+---POS----
+diary got diary NOUN NN dobj
+---POS----
+and got and CCONJ CC cc
+---POS----
+read got read VERB VB conj
+---POS----
+all stories all ADJ PDT predet
+---POS----
+the stories the DET DT det
+---POS----
+stories read story NOUN NNS dobj
+---POS----
+about stories about ADV RB prep
+---POS----
+and read and CCONJ CC cc
+---POS----
+told read tell VERB VBD conj
+---POS----
+the principal the DET DT det
+---POS----
+principal told principal NOUN NN dobj
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {0: -0.158318179902058, 1: 1.6092667157639524, 2: -0.8174157848330785, 3: 1.5644349556390331, 4: 1.8494302213503406, 5: 1.6284471762461266, 6: 1.6347785322983044}, 'pair_scores': {0: {}, 1: {0: -2.186644048886213}, 2: {0: 7.412393770236586, 1: 1.1768366618480317}, 3: {0: -2.3640873477582858, 1: -1.969233627706228, 2: -1.9801712115730556}, 4: {0: -2.9764501057309443, 1: -1.9383139342476947, 2: -2.852412871669566, 3: -1.8509055945686645}, 5: {0: -3.0529514408714284, 1: -1.9842734570242297, 2: -2.9995391170259094, 3: -1.7319195379166423, 4: -1.4938096061218422}, 6: {0: -2.733751896555342, 1: -1.8348260990959426, 2: -2.65962057635909, 3: -1.647618977996867, 4: -1.5637226790319876, 5: -1.5558051672700088}}}
+[her] [her]
+returned:  so her enemy got her diary and read all the stories about and told the principal
+current index:  0
+oops
+['so her enemy got her diary and read all the stories about and told the principal']
+so her enemy got her diary and read all the stories about and told the principal
+---POS----
+so got so ADP IN advmod
+---POS----
+her enemy -PRON- ADJ PRP$ poss
+---POS----
+enemy got enemy NOUN NN nsubj
+---POS----
+got got get VERB VBD ROOT
+---POS----
+her diary -PRON- ADJ PRP$ poss
+---POS----
+diary got diary NOUN NN dobj
+---POS----
+and got and CCONJ CC cc
+---POS----
+read got read VERB VB conj
+---POS----
+all stories all ADJ PDT predet
+---POS----
+the stories the DET DT det
+---POS----
+stories read story NOUN NNS dobj
+---POS----
+about stories about ADV RB prep
+---POS----
+and read and CCONJ CC cc
+---POS----
+told read tell VERB VBD conj
+---POS----
+the principal the DET DT det
+---POS----
+principal told principal NOUN NN dobj
+CHILD advmod
+CHILD nsubj
+ADDED enemy
+LIST OF ATTR ['enemy']
+ADD enemy TO her
+WARNING: Dependecy  poss  not included in the list
+CHILD dobj
+ADDED diary
+LIST OF ATTR ['diary']
+ADD diary TO her
+WARNING: Dependecy  cc  not included in the list
+CHILD dobj
+ADDED stories
+WARNING: Dependecy  predet  not included in the list
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  cc  not included in the list
+WARNING: Dependecy  advmod  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+head_char enemy
+HOLDCHAR ['enemy']
+event_char ['enemy']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>, <src.objects.eventchain.EventFrame.EventFrame object at 0x18914550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x19E7D910>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:pause
+D-ACTIONS:pause:had
+REC:anime
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:enemy
+D-ACTIONS:enemy:got
+REC:so
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['enemy'] Char_Action ['got'] Obj ['so'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>, 'pause': <src.objects.storyworld.Object.Object object at 0x18914EF0>, 'anime': <src.objects.storyworld.Object.Object object at 0x189148D0>, 'that': <src.objects.storyworld.Object.Object object at 0x189142B0>, 'friend': <src.objects.storyworld.Object.Object object at 0x18914FF0>, 'enemy': <src.objects.storyworld.Object.Object object at 0x19E7D7D0>, 'diary': <src.objects.storyworld.Object.Object object at 0x19E7D190>, 'stories': <src.objects.storyworld.Object.Object object at 0x19E7DAB0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D6D0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D610>]
+attr Has mom
+attr Has dad
+attr Has enemy
+attr Has diary
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+OBJECT pause:
+Name: pause
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x18914BB0>]
+attr CapableOf have False
+attr Has friend
+OBJECT anime:
+Name: anime
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x189145D0>]
+attr ReceivedAction want False
+OBJECT that:
+Name: that
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914C50>, <src.objects.storyworld.Attribute.Attribute object at 0x18914410>]
+attr ReceivedAction want False
+attr CapableOf steal False
+OBJECT friend:
+Name: friend
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT enemy:
+Name: enemy
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19E7D510>]
+attr CapableOf get False
+OBJECT diary:
+Name: diary
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT stories:
+Name: stories
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  so her enemy got her diary and read all the stories about and told the principal
+O:  Tell me more then.
+127.0.0.1 - - [26/May/2018 10:36:15] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+and then
+---POS----
+and and and CCONJ CC ROOT
+---POS----
+then and then ADV RB advmod
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  and then
+current index:  0
+oops
+['and then']
+and then
+---POS----
+and and and CCONJ CC ROOT
+---POS----
+then and then ADV RB advmod
+CHILD advmod
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>, <src.objects.eventchain.EventFrame.EventFrame object at 0x18914550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x19E7D910>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:pause
+D-ACTIONS:pause:had
+REC:anime
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:enemy
+D-ACTIONS:enemy:got
+REC:so
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['then'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>, 'pause': <src.objects.storyworld.Object.Object object at 0x18914EF0>, 'anime': <src.objects.storyworld.Object.Object object at 0x189148D0>, 'that': <src.objects.storyworld.Object.Object object at 0x189142B0>, 'friend': <src.objects.storyworld.Object.Object object at 0x18914FF0>, 'enemy': <src.objects.storyworld.Object.Object object at 0x19E7D7D0>, 'diary': <src.objects.storyworld.Object.Object object at 0x19E7D190>, 'stories': <src.objects.storyworld.Object.Object object at 0x19E7DAB0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D6D0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D610>]
+attr Has mom
+attr Has dad
+attr Has enemy
+attr Has diary
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+OBJECT pause:
+Name: pause
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x18914BB0>]
+attr CapableOf have False
+attr Has friend
+OBJECT anime:
+Name: anime
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x189145D0>]
+attr ReceivedAction want False
+OBJECT that:
+Name: that
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914C50>, <src.objects.storyworld.Attribute.Attribute object at 0x18914410>]
+attr ReceivedAction want False
+attr CapableOf steal False
+OBJECT friend:
+Name: friend
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT enemy:
+Name: enemy
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19E7D510>]
+attr CapableOf get False
+OBJECT diary:
+Name: diary
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT stories:
+Name: stories
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  and then
+O:  I want to know more.
+127.0.0.1 - - [26/May/2018 10:36:22] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+her friend told the principal the truth
+---POS----
+her friend -PRON- ADJ PRP$ poss
+---POS----
+friend told friend NOUN NN nsubj
+---POS----
+told told tell VERB VBD ROOT
+---POS----
+the principal the DET DT det
+---POS----
+principal told principal NOUN NN dative
+---POS----
+the truth the DET DT det
+---POS----
+truth told truth NOUN NN dobj
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+OWN CODE
+['her', 'friend', 'told', 'the', 'principal', 'the', 'truth']
+nsubj check prop or noun NOUN
+poss check pron ADJ
+poss check pron ADJ
+poss check pron ADJ
+returned:  friend's friend told the principal the truth
+current index:  0
+oops
+["friend's friend told the principal the truth"]
+friend's friend told the principal the truth
+---POS----
+friend friend friend NOUN NN poss
+---POS----
+'s friend 's PART POS case
+---POS----
+friend told friend NOUN NN nsubj
+---POS----
+told told tell VERB VBD ROOT
+---POS----
+the principal the DET DT det
+---POS----
+principal told principal NOUN NN dative
+---POS----
+the truth the DET DT det
+---POS----
+truth told truth NOUN NN dobj
+WARNING: Dependecy  poss  not included in the list
+ADDED principal
+CHILD dobj
+ADDED truth
+LIST OF ATTR ['truth']
+ADD truth TO principal
+WARNING: Dependecy  det  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+head_char friend
+HOLDCHAR ['friend']
+event_char ['friend']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>, <src.objects.eventchain.EventFrame.EventFrame object at 0x18914550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x19E7D910>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FE2F510>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:pause
+D-ACTIONS:pause:had
+REC:anime
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:enemy
+D-ACTIONS:enemy:got
+REC:so
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:friend
+D-ACTIONS:friend:told
+REC:truth
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['friend'] Char_Action ['told'] Obj ['truth'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>, 'pause': <src.objects.storyworld.Object.Object object at 0x18914EF0>, 'anime': <src.objects.storyworld.Object.Object object at 0x189148D0>, 'that': <src.objects.storyworld.Object.Object object at 0x189142B0>, 'friend': <src.objects.storyworld.Object.Object object at 0x18914FF0>, 'enemy': <src.objects.storyworld.Object.Object object at 0x19E7D7D0>, 'diary': <src.objects.storyworld.Object.Object object at 0x19E7D190>, 'stories': <src.objects.storyworld.Object.Object object at 0x19E7DAB0>, 'principal': <src.objects.storyworld.Object.Object object at 0x0FE2FFD0>, 'truth': <src.objects.storyworld.Object.Object object at 0x0FE2FE50>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D6D0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D610>]
+attr Has mom
+attr Has dad
+attr Has enemy
+attr Has diary
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+OBJECT pause:
+Name: pause
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x18914BB0>]
+attr CapableOf have False
+attr Has friend
+OBJECT anime:
+Name: anime
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x189145D0>]
+attr ReceivedAction want False
+OBJECT that:
+Name: that
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914C50>, <src.objects.storyworld.Attribute.Attribute object at 0x18914410>]
+attr ReceivedAction want False
+attr CapableOf steal False
+OBJECT friend:
+Name: friend
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT enemy:
+Name: enemy
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19E7D510>]
+attr CapableOf get False
+OBJECT diary:
+Name: diary
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT stories:
+Name: stories
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT principal:
+Name: principal
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FE2F6F0>]
+attr Has truth
+OBJECT truth:
+Name: truth
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+foot can kick ball.
+---POS----
+foot kick foot NOUN NN nsubj
+---POS----
+can kick can VERB MD aux
+---POS----
+kick kick kick VERB VB ROOT
+---POS----
+ball kick ball NOUN NN dobj
+---POS----
+. kick . PUNCT . punct
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  foot can kick ball.
+current index:  0
+oops
+['foot can kick ball.']
+foot can kick ball.
+---POS----
+foot kick foot NOUN NN nsubj
+---POS----
+can kick can VERB MD aux
+---POS----
+kick kick kick VERB VB ROOT
+---POS----
+ball kick ball NOUN NN dobj
+---POS----
+. kick . PUNCT . punct
+CHILD nsubj
+ADDED foot
+WARNING: Dependecy  aux  not included in the list
+CHILD dobj
+ADDED ball
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+head_char foot
+HOLDCHAR ['foot']
+event_char ['foot']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>, <src.objects.eventchain.EventFrame.EventFrame object at 0x18914550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x19E7D910>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FE2F510>, <src.objects.eventchain.EventFrame.EventFrame object at 0x185D1DB0>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:pause
+D-ACTIONS:pause:had
+REC:anime
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:enemy
+D-ACTIONS:enemy:got
+REC:so
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:friend
+D-ACTIONS:friend:told
+REC:truth
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:foot
+D-ACTIONS:foot:can kick
+REC:ball
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['foot'] Char_Action ['can kick'] Obj ['ball'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>, 'pause': <src.objects.storyworld.Object.Object object at 0x18914EF0>, 'anime': <src.objects.storyworld.Object.Object object at 0x189148D0>, 'that': <src.objects.storyworld.Object.Object object at 0x189142B0>, 'friend': <src.objects.storyworld.Object.Object object at 0x18914FF0>, 'enemy': <src.objects.storyworld.Object.Object object at 0x19E7D7D0>, 'diary': <src.objects.storyworld.Object.Object object at 0x19E7D190>, 'stories': <src.objects.storyworld.Object.Object object at 0x19E7DAB0>, 'principal': <src.objects.storyworld.Object.Object object at 0x0FE2FFD0>, 'truth': <src.objects.storyworld.Object.Object object at 0x0FE2FE50>, 'foot': <src.objects.storyworld.Object.Object object at 0x185D16B0>, 'ball': <src.objects.storyworld.Object.Object object at 0x185D1290>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D6D0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D610>]
+attr Has mom
+attr Has dad
+attr Has enemy
+attr Has diary
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+OBJECT pause:
+Name: pause
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x18914BB0>]
+attr CapableOf have False
+attr Has friend
+OBJECT anime:
+Name: anime
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x189145D0>]
+attr ReceivedAction want False
+OBJECT that:
+Name: that
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914C50>, <src.objects.storyworld.Attribute.Attribute object at 0x18914410>]
+attr ReceivedAction want False
+attr CapableOf steal False
+OBJECT friend:
+Name: friend
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT enemy:
+Name: enemy
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19E7D510>]
+attr CapableOf get False
+OBJECT diary:
+Name: diary
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT stories:
+Name: stories
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT principal:
+Name: principal
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FE2F6F0>]
+attr Has truth
+OBJECT truth:
+Name: truth
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT foot:
+Name: foot
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x185D1CB0>]
+attr CapableOf kick False
+OBJECT ball:
+Name: ball
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  her friend told the principal the truth
+O:  foot can kick ball.
+127.0.0.1 - - [26/May/2018 10:36:37] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+louder anime got expelled
+---POS----
+louder anime loud ADJ JJR amod
+---POS----
+anime expelled anime NOUN NN nsubjpass
+---POS----
+got expelled get VERB VBD auxpass
+---POS----
+expelled expelled expel VERB VBN ROOT
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  louder anime got expelled
+current index:  0
+oops
+['louder anime got expelled']
+louder anime got expelled
+---POS----
+louder anime loud ADJ JJR amod
+---POS----
+anime expelled anime NOUN NN nsubjpass
+---POS----
+got expelled get VERB VBD auxpass
+---POS----
+expelled expelled expel VERB VBN ROOT
+CHILD nsubjpass
+LIST OF ATTR ['louder']
+ADD louder TO anime
+WARNING: Dependecy  auxpass  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+head_char anime
+HOLDCHAR ['anime']
+event_char ['anime']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>, <src.objects.eventchain.EventFrame.EventFrame object at 0x18914550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x19E7D910>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FE2F510>, <src.objects.eventchain.EventFrame.EventFrame object at 0x185D1DB0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x195F5950>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:pause
+D-ACTIONS:pause:had
+REC:anime
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:enemy
+D-ACTIONS:enemy:got
+REC:so
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:friend
+D-ACTIONS:friend:told
+REC:truth
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:foot
+D-ACTIONS:foot:can kick
+REC:ball
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:anime
+D-ACTIONS:anime:expelled
+REC:None
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['anime'] Char_Action ['expelled'] Obj [] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>, 'pause': <src.objects.storyworld.Object.Object object at 0x18914EF0>, 'anime': <src.objects.storyworld.Object.Object object at 0x189148D0>, 'that': <src.objects.storyworld.Object.Object object at 0x189142B0>, 'friend': <src.objects.storyworld.Object.Object object at 0x18914FF0>, 'enemy': <src.objects.storyworld.Object.Object object at 0x19E7D7D0>, 'diary': <src.objects.storyworld.Object.Object object at 0x19E7D190>, 'stories': <src.objects.storyworld.Object.Object object at 0x19E7DAB0>, 'principal': <src.objects.storyworld.Object.Object object at 0x0FE2FFD0>, 'truth': <src.objects.storyworld.Object.Object object at 0x0FE2FE50>, 'foot': <src.objects.storyworld.Object.Object object at 0x185D16B0>, 'ball': <src.objects.storyworld.Object.Object object at 0x185D1290>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D6D0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D610>]
+attr Has mom
+attr Has dad
+attr Has enemy
+attr Has diary
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+OBJECT pause:
+Name: pause
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x18914BB0>]
+attr CapableOf have False
+attr Has friend
+OBJECT anime:
+Name: anime
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x189145D0>, <src.objects.storyworld.Attribute.Attribute object at 0x195F5B70>]
+attr ReceivedAction want False
+attr HasProperty louder
+OBJECT that:
+Name: that
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914C50>, <src.objects.storyworld.Attribute.Attribute object at 0x18914410>]
+attr ReceivedAction want False
+attr CapableOf steal False
+OBJECT friend:
+Name: friend
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT enemy:
+Name: enemy
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19E7D510>]
+attr CapableOf get False
+OBJECT diary:
+Name: diary
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT stories:
+Name: stories
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT principal:
+Name: principal
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FE2F6F0>]
+attr Has truth
+OBJECT truth:
+Name: truth
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT foot:
+Name: foot
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x185D1CB0>]
+attr CapableOf kick False
+OBJECT ball:
+Name: ball
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+There is plate in sink.
+---POS----
+There is there ADV EX expl
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+plate is plate NOUN NN attr
+---POS----
+in is in ADP IN prep
+---POS----
+sink in sink NOUN NN pobj
+---POS----
+. is . PUNCT . punct
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  There is plate in sink.
+current index:  0
+oops
+['There is plate in sink.']
+There is plate in sink.
+---POS----
+There is there ADV EX expl
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+plate is plate NOUN NN attr
+---POS----
+in is in ADP IN prep
+---POS----
+sink in sink NOUN NN pobj
+---POS----
+. is . PUNCT . punct
+WARNING: Dependecy  expl  not included in the list
+CHILD attr
+ADDED plate
+LIST OF ATTR ['plate']
+ADDED sink
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>, <src.objects.eventchain.EventFrame.EventFrame object at 0x18914550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x19E7D910>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FE2F510>, <src.objects.eventchain.EventFrame.EventFrame object at 0x185D1DB0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x195F5950>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:pause
+D-ACTIONS:pause:had
+REC:anime
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:enemy
+D-ACTIONS:enemy:got
+REC:so
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:friend
+D-ACTIONS:friend:told
+REC:truth
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:foot
+D-ACTIONS:foot:can kick
+REC:ball
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:anime
+D-ACTIONS:anime:expelled
+REC:None
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['plate'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>, 'pause': <src.objects.storyworld.Object.Object object at 0x18914EF0>, 'anime': <src.objects.storyworld.Object.Object object at 0x189148D0>, 'that': <src.objects.storyworld.Object.Object object at 0x189142B0>, 'friend': <src.objects.storyworld.Object.Object object at 0x18914FF0>, 'enemy': <src.objects.storyworld.Object.Object object at 0x19E7D7D0>, 'diary': <src.objects.storyworld.Object.Object object at 0x19E7D190>, 'stories': <src.objects.storyworld.Object.Object object at 0x19E7DAB0>, 'principal': <src.objects.storyworld.Object.Object object at 0x0FE2FFD0>, 'truth': <src.objects.storyworld.Object.Object object at 0x0FE2FE50>, 'foot': <src.objects.storyworld.Object.Object object at 0x185D16B0>, 'ball': <src.objects.storyworld.Object.Object object at 0x185D1290>, 'plate': <src.objects.storyworld.Object.Object object at 0x1BF1A470>, 'sink': <src.objects.storyworld.Object.Object object at 0x1BF1AB10>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D6D0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D610>]
+attr Has mom
+attr Has dad
+attr Has enemy
+attr Has diary
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+OBJECT pause:
+Name: pause
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x18914BB0>]
+attr CapableOf have False
+attr Has friend
+OBJECT anime:
+Name: anime
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x189145D0>, <src.objects.storyworld.Attribute.Attribute object at 0x195F5B70>]
+attr ReceivedAction want False
+attr HasProperty louder
+OBJECT that:
+Name: that
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914C50>, <src.objects.storyworld.Attribute.Attribute object at 0x18914410>]
+attr ReceivedAction want False
+attr CapableOf steal False
+OBJECT friend:
+Name: friend
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT enemy:
+Name: enemy
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19E7D510>]
+attr CapableOf get False
+OBJECT diary:
+Name: diary
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT stories:
+Name: stories
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT principal:
+Name: principal
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FE2F6F0>]
+attr Has truth
+OBJECT truth:
+Name: truth
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT foot:
+Name: foot
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x185D1CB0>]
+attr CapableOf kick False
+OBJECT ball:
+Name: ball
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT plate:
+Name: plate
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT sink:
+Name: sink
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  louder anime got expelled
+O:  There is plate in sink.
+127.0.0.1 - - [26/May/2018 10:36:48] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+and nikki and brandon and every
+---POS----
+and nikki and CCONJ CC cc
+---POS----
+nikki nikki nikki NOUN NN ROOT
+---POS----
+and nikki and CCONJ CC cc
+---POS----
+brandon nikki brandon NOUN NN conj
+---POS----
+and nikki and CCONJ CC cc
+---POS----
+every nikki every DET DT conj
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  and nikki and brandon and every
+current index:  0
+oops
+['and nikki and brandon and every']
+and nikki and brandon and every
+---POS----
+and nikki and CCONJ CC cc
+---POS----
+nikki nikki nikki NOUN NN ROOT
+---POS----
+and nikki and CCONJ CC cc
+---POS----
+brandon nikki brandon NOUN NN conj
+---POS----
+and nikki and CCONJ CC cc
+---POS----
+every nikki every DET DT conj
+WARNING: Dependecy  cc  not included in the list
+WARNING: Dependecy  cc  not included in the list
+WARNING: Dependecy  cc  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>, <src.objects.eventchain.EventFrame.EventFrame object at 0x18914550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x19E7D910>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FE2F510>, <src.objects.eventchain.EventFrame.EventFrame object at 0x185D1DB0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x195F5950>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:pause
+D-ACTIONS:pause:had
+REC:anime
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:enemy
+D-ACTIONS:enemy:got
+REC:so
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:friend
+D-ACTIONS:friend:told
+REC:truth
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:foot
+D-ACTIONS:foot:can kick
+REC:ball
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:anime
+D-ACTIONS:anime:expelled
+REC:None
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj [] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>, 'pause': <src.objects.storyworld.Object.Object object at 0x18914EF0>, 'anime': <src.objects.storyworld.Object.Object object at 0x189148D0>, 'that': <src.objects.storyworld.Object.Object object at 0x189142B0>, 'friend': <src.objects.storyworld.Object.Object object at 0x18914FF0>, 'enemy': <src.objects.storyworld.Object.Object object at 0x19E7D7D0>, 'diary': <src.objects.storyworld.Object.Object object at 0x19E7D190>, 'stories': <src.objects.storyworld.Object.Object object at 0x19E7DAB0>, 'principal': <src.objects.storyworld.Object.Object object at 0x0FE2FFD0>, 'truth': <src.objects.storyworld.Object.Object object at 0x0FE2FE50>, 'foot': <src.objects.storyworld.Object.Object object at 0x185D16B0>, 'ball': <src.objects.storyworld.Object.Object object at 0x185D1290>, 'plate': <src.objects.storyworld.Object.Object object at 0x1BF1A470>, 'sink': <src.objects.storyworld.Object.Object object at 0x1BF1AB10>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D6D0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D610>]
+attr Has mom
+attr Has dad
+attr Has enemy
+attr Has diary
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+OBJECT pause:
+Name: pause
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x18914BB0>]
+attr CapableOf have False
+attr Has friend
+OBJECT anime:
+Name: anime
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x189145D0>, <src.objects.storyworld.Attribute.Attribute object at 0x195F5B70>]
+attr ReceivedAction want False
+attr HasProperty louder
+OBJECT that:
+Name: that
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914C50>, <src.objects.storyworld.Attribute.Attribute object at 0x18914410>]
+attr ReceivedAction want False
+attr CapableOf steal False
+OBJECT friend:
+Name: friend
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT enemy:
+Name: enemy
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19E7D510>]
+attr CapableOf get False
+OBJECT diary:
+Name: diary
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT stories:
+Name: stories
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT principal:
+Name: principal
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FE2F6F0>]
+attr Has truth
+OBJECT truth:
+Name: truth
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT foot:
+Name: foot
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x185D1CB0>]
+attr CapableOf kick False
+OBJECT ball:
+Name: ball
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT plate:
+Name: plate
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT sink:
+Name: sink
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+There was a baby in the crib.
+---POS----
+There was there ADV EX expl
+---POS----
+was was be VERB VBD ROOT
+---POS----
+a baby a DET DT det
+---POS----
+baby was baby NOUN NN attr
+---POS----
+in baby in ADP IN prep
+---POS----
+the crib the DET DT det
+---POS----
+crib in crib NOUN NN pobj
+---POS----
+. was . PUNCT . punct
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  There was a baby in the crib.
+current index:  0
+oops
+['There was a baby in the crib.']
+There was a baby in the crib.
+---POS----
+There was there ADV EX expl
+---POS----
+was was be VERB VBD ROOT
+---POS----
+a baby a DET DT det
+---POS----
+baby was baby NOUN NN attr
+---POS----
+in baby in ADP IN prep
+---POS----
+the crib the DET DT det
+---POS----
+crib in crib NOUN NN pobj
+---POS----
+. was . PUNCT . punct
+WARNING: Dependecy  expl  not included in the list
+CHILD attr
+ADDED baby
+LIST OF ATTR ['baby']
+WARNING: Dependecy  det  not included in the list
+ADDED crib
+WARNING: Dependecy  det  not included in the list
+ERROR: Cannot find current index or node  attr  has been recorded
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x1A20A8D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0178B590>, <src.objects.eventchain.EventFrame.EventFrame object at 0x18914550>, <src.objects.eventchain.EventFrame.EventFrame object at 0x19E7D910>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FE2F510>, <src.objects.eventchain.EventFrame.EventFrame object at 0x185D1DB0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x195F5950>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:watermelon
+D-ACTIONS:watermelon:is
+REC:part
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:bob
+D-ACTIONS:bob:is
+REC:artist
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:pause
+D-ACTIONS:pause:had
+REC:anime
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:enemy
+D-ACTIONS:enemy:got
+REC:so
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:friend
+D-ACTIONS:friend:told
+REC:truth
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:foot
+D-ACTIONS:foot:can kick
+REC:ball
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:anime
+D-ACTIONS:anime:expelled
+REC:None
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['baby'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>, 'girl': <src.objects.storyworld.Object.Object object at 0x1ABC6930>, 'island': <src.objects.storyworld.Object.Object object at 0x1CC76B70>, 'mom': <src.objects.storyworld.Object.Object object at 0x1CC76D30>, 'her': <src.objects.storyworld.Object.Object object at 0x1CC76CF0>, 'dad': <src.objects.storyworld.Object.Object object at 0x1CC76E50>, 'love': <src.objects.storyworld.Object.Object object at 0x1AB857D0>, 'watermelon': <src.objects.storyworld.Object.Object object at 0x1A20A2F0>, 'part': <src.objects.storyworld.Object.Object object at 0x1A20AED0>, 'bob': <src.objects.storyworld.Object.Object object at 0x0178BE10>, 'pause': <src.objects.storyworld.Object.Object object at 0x18914EF0>, 'anime': <src.objects.storyworld.Object.Object object at 0x189148D0>, 'that': <src.objects.storyworld.Object.Object object at 0x189142B0>, 'friend': <src.objects.storyworld.Object.Object object at 0x18914FF0>, 'enemy': <src.objects.storyworld.Object.Object object at 0x19E7D7D0>, 'diary': <src.objects.storyworld.Object.Object object at 0x19E7D190>, 'stories': <src.objects.storyworld.Object.Object object at 0x19E7DAB0>, 'principal': <src.objects.storyworld.Object.Object object at 0x0FE2FFD0>, 'truth': <src.objects.storyworld.Object.Object object at 0x0FE2FE50>, 'foot': <src.objects.storyworld.Object.Object object at 0x185D16B0>, 'ball': <src.objects.storyworld.Object.Object object at 0x185D1290>, 'plate': <src.objects.storyworld.Object.Object object at 0x1BF1A470>, 'sink': <src.objects.storyworld.Object.Object object at 0x1BF1AB10>, 'baby': <src.objects.storyworld.Object.Object object at 0x0F2D5650>, 'crib': <src.objects.storyworld.Object.Object object at 0x0F2D55D0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+OBJECT girl:
+Name: girl
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19901C90>, <src.objects.storyworld.Attribute.Attribute object at 0x1D0E9E50>]
+attr HasProperty nikki
+attr HasProperty nikki
+OBJECT island:
+Name: island
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT mom:
+Name: mom
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT her:
+Name: her
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1CC76D90>, <src.objects.storyworld.Attribute.Attribute object at 0x1CC76ED0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D6D0>, <src.objects.storyworld.Attribute.Attribute object at 0x19E7D610>]
+attr Has mom
+attr Has dad
+attr Has enemy
+attr Has diary
+OBJECT dad:
+Name: dad
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT love:
+Name: love
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT watermelon:
+Name: watermelon
+Type: ['part']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A20A490>]
+attr IsA part
+OBJECT part:
+Name: part
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT bob:
+Name: bob
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0178B690>]
+attr HasProperty artist False
+OBJECT pause:
+Name: pause
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x18914BB0>]
+attr CapableOf have False
+attr Has friend
+OBJECT anime:
+Name: anime
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x189145D0>, <src.objects.storyworld.Attribute.Attribute object at 0x195F5B70>]
+attr ReceivedAction want False
+attr HasProperty louder
+OBJECT that:
+Name: that
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18914C50>, <src.objects.storyworld.Attribute.Attribute object at 0x18914410>]
+attr ReceivedAction want False
+attr CapableOf steal False
+OBJECT friend:
+Name: friend
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT enemy:
+Name: enemy
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x19E7D510>]
+attr CapableOf get False
+OBJECT diary:
+Name: diary
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT stories:
+Name: stories
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT principal:
+Name: principal
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FE2F6F0>]
+attr Has truth
+OBJECT truth:
+Name: truth
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT foot:
+Name: foot
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x185D1CB0>]
+attr CapableOf kick False
+OBJECT ball:
+Name: ball
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT plate:
+Name: plate
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT sink:
+Name: sink
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT baby:
+Name: baby
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT crib:
+Name: crib
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  and nikki and brandon and every
+O:  There was a baby in the crib.
+127.0.0.1 - - [26/May/2018 10:36:59] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:37:05] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:37:13] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+

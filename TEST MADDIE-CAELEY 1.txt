@@ -1,0 +1,825 @@
+Microsoft Windows [Version 10.0.17134.48]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\Bryan>cd documents/projects/orsen
+
+C:\Users\Bryan\Documents\Projects\Orsen>orsen.py
+Traceback (most recent call last):
+  File "C:\Users\Bryan\Documents\Projects\Orsen\orsen.py", line 1, in <module>
+    from src.run import extract_info, new_world
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\run.py", line 1, in <module>
+    import spacy
+ModuleNotFoundError: No module named 'spacy'
+
+C:\Users\Bryan\Documents\Projects\Orsen>cd venv/scripts
+
+C:\Users\Bryan\Documents\Projects\Orsen\venv\Scripts>activate
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen\venv\Scripts>cd../..
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>orsen.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-257-480
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [26/May/2018 09:49:48] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+rhfgh
+---POS----
+rhfgh rhfgh rhfgh NOUN NN ROOT
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  rhfgh
+current index:  0
+oops
+['rhfgh']
+rhfgh
+---POS----
+rhfgh rhfgh rhfgh NOUN NN ROOT
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj [] Obj_Action [] LOC []
+{}
+{}
+127.0.0.1 - - [26/May/2018 09:49:56] "[1m[35mPOST /orsen HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\orsen.py", line 108, in orsen
+    retrieved = retrieve_output(rawTextQuery, storyId)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DialoguePlanner.py", line 94, in retrieve_output
+    output = generate_response(choice, world, [], coreferenced_text)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DialoguePlanner.py", line 136, in generate_response
+    pre_choices = DBO_Move.get_templates_of_type(DBO_Move.TYPE_FEEDBACK)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DBO_Move.py", line 69, in get_templates_of_type
+    conn = SqlConnConcepts.get_connection()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\db\SqlConnector.py", line 35, in get_connection
+    SqlConnConcepts.schema)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 699, in __init__
+    self.connect()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 936, in connect
+    self._request_authentication()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 1156, in _request_authentication
+    auth_packet = self._read_packet()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+ * Detected change in 'C:\\Users\\Bryan\\Documents\\Projects\\Orsen\\src\\db\\SqlConnector.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-257-480
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Detected change in 'C:\\Users\\Bryan\\Documents\\Projects\\Orsen\\src\\db\\SqlConnector.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 196-257-480
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [26/May/2018 09:51:55] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+hi
+---POS----
+hi hi hi INTJ UH ROOT
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  hi
+current index:  0
+oops
+['hi']
+hi
+---POS----
+hi hi hi INTJ UH ROOT
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj [] Obj_Action [] LOC []
+{}
+{}
+I:  hi
+O:  Then what happens?
+127.0.0.1 - - [26/May/2018 09:52:03] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+winfred is good
+---POS----
+winfred is winfr VERB VBN csubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+good is good ADJ JJ acomp
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  winfred is good
+current index:  0
+oops
+['winfred is good']
+winfred is good
+---POS----
+winfred is winfr VERB VBN csubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+good is good ADJ JJ acomp
+WARNING: Dependecy  csubj  not included in the list
+CHILD acomp
+LIST OF ATTR ['good']
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['good'] Obj_Action [] LOC []
+{}
+{}
+I:  winfred is good
+O:  Oh I see!
+127.0.0.1 - - [26/May/2018 09:52:16] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 09:52:24] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 09:55:01] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:16:18] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+you gotta be closed
+---POS----
+you got -PRON- PRON PRP nsubj
+---POS----
+got got get VERB VBD ROOT
+---POS----
+ta be to PART TO aux
+---POS----
+be got be VERB VB xcomp
+---POS----
+closed be close VERB VBN acomp
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+returned:  you gotta be closed
+current index:  0
+oops
+['you gotta be closed']
+you gotta be closed
+---POS----
+you got -PRON- PRON PRP nsubj
+---POS----
+got got get VERB VBD ROOT
+---POS----
+ta be to PART TO aux
+---POS----
+be got be VERB VB xcomp
+---POS----
+closed be close VERB VBN acomp
+CHILD nsubj
+ADDED you
+CHILD xcomp
+ENTERING 0
+WARNING: Dependecy  aux  not included in the list
+CHILD acomp
+LIST OF ATTR ['closed']
+ADD closed TO you
+-------------- Entering EVENT EXTRACTION -----------------
+head_char you
+HOLDCHAR ['you']
+event_char ['you']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['you'] Char_Action ['got'] Obj ['ta be'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+I:  you gotta be closed
+O:  I see, that's interesting.
+127.0.0.1 - - [26/May/2018 10:16:34] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:16:42] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:16:57] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+she was 16 years old
+---POS----
+she was -PRON- PRON PRP nsubj
+---POS----
+was was be VERB VBD ROOT
+---POS----
+16 years 16 NUM CD nummod
+---POS----
+years old year NOUN NNS npadvmod
+---POS----
+old was old ADJ JJ acomp
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+returned:  she was 16 years old
+current index:  0
+oops
+['she was 16 years old']
+she was 16 years old
+---POS----
+she was -PRON- PRON PRP nsubj
+---POS----
+was was be VERB VBD ROOT
+---POS----
+16 years 16 NUM CD nummod
+---POS----
+years old year NOUN NNS npadvmod
+---POS----
+old was old ADJ JJ acomp
+CHILD nsubj
+ADDED she
+CHILD acomp
+LIST OF ATTR ['old']
+ADD old TO she
+CHILD npadvmod
+ERROR: Cannot find current index or node  npadvmod  has been recorded
+-------------- Entering EVENT EXTRACTION -----------------
+head_char she
+HOLDCHAR ['she']
+event_char ['she']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [1] Char ['she'] Char_Action ['was'] Obj ['old'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+I:  she was 16 years old
+O:  Tell me more then.
+127.0.0.1 - - [26/May/2018 10:17:06] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:17:17] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+What if knife can cut steak.
+---POS----
+What cut what NOUN WP dobj
+---POS----
+if cut if ADP IN mark
+---POS----
+knife cut knife NOUN NN nsubj
+---POS----
+can cut can VERB MD aux
+---POS----
+cut cut cut VERB VB ROOT
+---POS----
+steak cut steak NOUN NN dobj
+---POS----
+. cut . PUNCT . punct
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  What if knife can cut steak.
+current index:  0
+oops
+['What if knife can cut steak.']
+What if knife can cut steak.
+---POS----
+What cut what NOUN WP dobj
+---POS----
+if cut if ADP IN mark
+---POS----
+knife cut knife NOUN NN nsubj
+---POS----
+can cut can VERB MD aux
+---POS----
+cut cut cut VERB VB ROOT
+---POS----
+steak cut steak NOUN NN dobj
+---POS----
+. cut . PUNCT . punct
+CHILD dobj
+ADDED what
+WARNING: Dependecy  mark  not included in the list
+CHILD nsubj
+ADDED knife
+WARNING: Dependecy  aux  not included in the list
+CHILD dobj
+ADDED steak
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+head_char knife
+HOLDCHAR ['knife']
+event_char ['knife']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['knife'] Char_Action ['can cut'] Obj ['what'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+127.0.0.1 - - [26/May/2018 10:17:32] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:17:44] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:19:37] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+once upon a time
+---POS----
+once once once ADV RB ROOT
+---POS----
+upon once upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  once upon a time
+current index:  0
+oops
+['once upon a time']
+once upon a time
+---POS----
+once once once ADV RB ROOT
+---POS----
+upon once upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+WARNING: Dependecy  det  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['time'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  once upon a time
+O:  Oh I see!
+127.0.0.1 - - [26/May/2018 10:19:53] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:20:04] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [26/May/2018 10:20:19] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+What if ocean can swim in.
+---POS----
+What swim what NOUN WP pobj
+---POS----
+if swim if ADP IN mark
+---POS----
+ocean swim ocean NOUN NN nsubj
+---POS----
+can swim can VERB MD aux
+---POS----
+swim swim swim VERB VB ROOT
+---POS----
+in swim in PART RP prt
+---POS----
+. swim . PUNCT . punct
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  What if ocean can swim in.
+current index:  0
+oops
+['What if ocean can swim in.']
+What if ocean can swim in.
+---POS----
+What swim what NOUN WP pobj
+---POS----
+if swim if ADP IN mark
+---POS----
+ocean swim ocean NOUN NN nsubj
+---POS----
+can swim can VERB MD aux
+---POS----
+swim swim swim VERB VB ROOT
+---POS----
+in swim in PART RP prt
+---POS----
+. swim . PUNCT . punct
+WARNING: Dependecy  mark  not included in the list
+CHILD nsubj
+ADDED ocean
+WARNING: Dependecy  aux  not included in the list
+WARNING: Dependecy  prt  not included in the list
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+head_char ocean
+HOLDCHAR ['ocean']
+event_char ['ocean']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x196A8F10>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FC47290>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0FEE8410>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0DD8C550>]
+-1--1
+DOER:you
+D-ACTIONS:you:got
+REC:ta be
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:she
+D-ACTIONS:she:was
+REC:old
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:knife
+D-ACTIONS:knife:can cut
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ocean
+D-ACTIONS:ocean:can swim
+REC:what
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['ocean'] Char_Action ['can swim'] Obj ['what'] Obj_Action [] LOC []
+{}
+{'you': <src.objects.storyworld.Object.Object object at 0x196A8FB0>, 'she': <src.objects.storyworld.Object.Object object at 0x0FC47850>, 'what': <src.objects.storyworld.Object.Object object at 0x0FEE8F70>, 'knife': <src.objects.storyworld.Object.Object object at 0x0FEE8E50>, 'steak': <src.objects.storyworld.Object.Object object at 0x0FEE8E10>, 'ocean': <src.objects.storyworld.Object.Object object at 0x0DD8C390>}
+OBJECT you:
+Name: you
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x196A89F0>, <src.objects.storyworld.Attribute.Attribute object at 0x196A88B0>]
+attr CapableOf get False
+attr HasProperty closed False
+OBJECT she:
+Name: she
+Type: []
+inSetting: {'LOC': None, 'DATE': '16 years old', 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FC47C10>]
+attr HasProperty old False
+OBJECT what:
+Name: what
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT knife:
+Name: knife
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0FEE8470>]
+attr CapableOf cut False
+OBJECT steak:
+Name: steak
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT ocean:
+Name: ocean
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0DD8CC30>]
+attr CapableOf swim False
+SETTING #16 years old:
+Name: 16 years old
+Type: DATE
+
+SETTING #time:
+Name: time
+Type: TIME
+
+127.0.0.1 - - [26/May/2018 10:20:40] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+
+
+

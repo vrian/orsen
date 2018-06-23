@@ -1,0 +1,3583 @@
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>python orsen.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 209-107-498
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+STORY ID  0
+127.0.0.1 - - [02/Jun/2018 00:08:22] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+a dog is good
+---POS----
+a dog a DET DT det
+---POS----
+dog is dog NOUN NN nsubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+good is good ADJ JJ acomp
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  a dog is good
+current index:  0
+oops
+['a dog is good']
+a dog is good
+---POS----
+a dog a DET DT det
+---POS----
+dog is dog NOUN NN nsubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+good is good ADJ JJ acomp
+CHILD nsubj
+ADDED dog
+WARNING: Dependecy  det  not included in the list
+CHILD acomp
+LIST OF ATTR ['good']
+ADD good TO dog
+-------------- Entering EVENT EXTRACTION -----------------
+head_char dog
+HOLDCHAR ['dog']
+event_char ['dog']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x18A3C350>]
+-1--1
+DOER:dog
+D-ACTIONS:dog:is
+REC:good
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [1] Char ['dog'] Char_Action ['is'] Obj ['good'] Obj_Action [] LOC []
+{}
+{'dog': <src.objects.storyworld.Object.Object object at 0x18A3CB50>}
+OBJECT dog:
+Name: dog
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18A3CA30>]
+attr HasProperty good False
+Event Extraction worldid  0  <---
+I:  a dog is good
+O:  I want to know more.
+127.0.0.1 - - [02/Jun/2018 00:08:36] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [02/Jun/2018 00:08:46] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+STORY ID  1
+127.0.0.1 - - [02/Jun/2018 00:08:53] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+the cat is black
+---POS----
+the cat the DET DT det
+---POS----
+cat is cat NOUN NN nsubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+black is black ADJ JJ acomp
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  the cat is black
+current index:  0
+oops
+['the cat is black']
+the cat is black
+---POS----
+the cat the DET DT det
+---POS----
+cat is cat NOUN NN nsubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+black is black ADJ JJ acomp
+CHILD nsubj
+ADDED cat
+WARNING: Dependecy  det  not included in the list
+CHILD acomp
+LIST OF ATTR ['black']
+ADD black TO cat
+-------------- Entering EVENT EXTRACTION -----------------
+head_char cat
+HOLDCHAR ['cat']
+event_char ['cat']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x1A07CBB0>]
+-1--1
+DOER:cat
+D-ACTIONS:cat:is
+REC:black
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [1] Char ['cat'] Char_Action ['is'] Obj ['black'] Obj_Action [] LOC []
+{}
+{'cat': <src.objects.storyworld.Object.Object object at 0x1A07CF90>}
+OBJECT cat:
+Name: cat
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1A07CBD0>]
+attr HasProperty black False
+Event Extraction worldid  1  <---
+I:  the cat is black
+O:  Tell me more then.
+127.0.0.1 - - [02/Jun/2018 00:09:04] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>cd orsen
+The system cannot find the path specified.
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>cd orsen
+The system cannot find the path specified.
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>python orsen.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 209-107-498
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+STORY ID  0
+127.0.0.1 - - [02/Jun/2018 00:10:47] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+Merdin is good
+---POS----
+Merdin is merdin PROPN NNP nsubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+good is good ADJ JJ acomp
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  Merdin is good
+current index:  0
+oops
+['Merdin is good']
+Merdin is good
+---POS----
+Merdin is merdin PROPN NNP nsubj
+---POS----
+is is be VERB VBZ ROOT
+---POS----
+good is good ADJ JJ acomp
+CHILD nsubj
+ADDED merdin
+CHILD acomp
+LIST OF ATTR ['good']
+ADD good TO merdin
+-------------- Entering EVENT EXTRACTION -----------------
+head_char merdin
+HOLDCHAR ['merdin']
+event_char ['merdin']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x18683B70>]
+-1--1
+DOER:merdin
+D-ACTIONS:merdin:is
+REC:good
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [1] Char ['merdin'] Char_Action ['is'] Obj ['good'] Obj_Action [] LOC []
+{}
+{'merdin': <src.objects.storyworld.Object.Object object at 0x186834D0>}
+OBJECT merdin:
+Name: merdin
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x18683830>]
+attr HasProperty good False
+Event Extraction worldid  0  <---
+I:  Merdin is good
+O:  Tell me more then.
+127.0.0.1 - - [02/Jun/2018 00:11:02] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+STORY ID  1
+127.0.0.1 - - [02/Jun/2018 00:11:19] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+Sallayne went to school
+---POS----
+Sallayne went sallayne PROPN NNP nsubj
+---POS----
+went went go VERB VBD ROOT
+---POS----
+to went to ADP IN prep
+---POS----
+school to school NOUN NN pobj
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  Sallayne went to school
+current index:  0
+oops
+['Sallayne went to school']
+Sallayne went to school
+---POS----
+Sallayne went sallayne PROPN NNP nsubj
+---POS----
+went went go VERB VBD ROOT
+---POS----
+to went to ADP IN prep
+---POS----
+school to school NOUN NN pobj
+CHILD nsubj
+ADDED sallayne
+-------------- Entering EVENT EXTRACTION -----------------
+head_char sallayne
+HOLDCHAR ['sallayne']
+event_char ['sallayne']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x1802CF30>]
+-1--1
+DOER:sallayne
+D-ACTIONS:sallayne:went to
+REC:school
+R-ACTIONS:[]
+SETTING:None
+---- EVENT FRAME ----
+Type [0] Char ['sallayne'] Char_Action ['went to'] Obj ['school'] Obj_Action [] LOC []
+{}
+{'sallayne': <src.objects.storyworld.Object.Object object at 0x1802CFB0>}
+OBJECT sallayne:
+Name: sallayne
+Type: []
+inSetting: {'LOC': 'school', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1802CC10>]
+attr CapableOf go False
+SETTING #school:
+Name: school
+Type: LOC
+
+Event Extraction worldid  1  <---
+I:  Sallayne went to school
+O:  I want to know more.
+127.0.0.1 - - [02/Jun/2018 00:11:36] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>python orsen.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 209-107-498
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+STORY ID  0
+127.0.0.1 - - [02/Jun/2018 00:12:31] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+once upon a time there was a beautiful princess named snow white
+---POS----
+once was once ADV RB advmod
+---POS----
+upon was upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+---POS----
+there was there ADV EX expl
+---POS----
+was was be VERB VBD ROOT
+---POS----
+a princess a DET DT det
+---POS----
+beautiful princess beautiful ADJ JJ amod
+---POS----
+princess was princess NOUN NN attr
+---POS----
+named princess name VERB VBN acl
+---POS----
+snow named snow NOUN NN oprd
+---POS----
+white named white NOUN NN oprd
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  once upon a time there was a beautiful princess named snow white
+current index:  0
+oops
+['once upon a time there was a beautiful princess named snow white']
+once upon a time there was a beautiful princess named snow white
+---POS----
+once was once ADV RB advmod
+---POS----
+upon was upon ADP IN prep
+---POS----
+a time a DET DT det
+---POS----
+time upon time NOUN NN pobj
+---POS----
+there was there ADV EX expl
+---POS----
+was was be VERB VBD ROOT
+---POS----
+a princess a DET DT det
+---POS----
+beautiful princess beautiful ADJ JJ amod
+---POS----
+princess was princess NOUN NN attr
+---POS----
+named princess name VERB VBN acl
+---POS----
+snow named snow NOUN NN oprd
+---POS----
+white named white NOUN NN oprd
+CHILD advmod
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  expl  not included in the list
+CHILD attr
+ADDED princess
+LIST OF ATTR ['beautiful']
+ADD beautiful TO princess
+LIST OF ATTR ['princess']
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  advmod  not included in the list
+LIST OF ATTR ['snow']
+ADD snow TO princess
+LIST OF ATTR ['white']
+ADD white TO princess
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+---- EVENT FRAME ----
+Type [] Char [] Char_Action [] Obj ['once'] Obj_Action [] LOC []
+{}
+{'princess': <src.objects.storyworld.Object.Object object at 0x1935BA90>}
+OBJECT princess:
+Name: princess
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1935B930>, <src.objects.storyworld.Attribute.Attribute object at 0x1935BA10>, <src.objects.storyworld.Attribute.Attribute object at 0x1935B990>]
+attr HasProperty beautiful
+attr HasProperty snow
+attr HasProperty white
+SETTING #time:
+Name: time
+Type: TIME
+
+Event Extraction worldid  0  <---
+I:  once upon a time there was a beautiful princess named snow white
+O:  Tell me more about princess.
+127.0.0.1 - - [02/Jun/2018 00:12:47] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+she was kind and gentle and a friend to all animals
+---POS----
+she was -PRON- PRON PRP nsubj
+---POS----
+was was be VERB VBD ROOT
+---POS----
+kind was kind ADJ JJ acomp
+---POS----
+and kind and CCONJ CC cc
+---POS----
+gentle kind gentle ADJ JJ conj
+---POS----
+and kind and CCONJ CC cc
+---POS----
+a friend a DET DT det
+---POS----
+friend kind friend NOUN NN conj
+---POS----
+to friend to ADP IN prep
+---POS----
+all animals all DET DT det
+---POS----
+animals to animal NOUN NNS pobj
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {0: -0.5201074890294183, 1: 1.6284162971354967, 2: 1.7824331515068246, 3: 1.822865142704614}, 'pair_scores': {0: {}, 1: {0: -1.7206469376025488}, 2: {0: -1.7684670693236586, 1: -1.503415571960656}, 3: {0: -4.092170322743362, 1: -1.4991063425599553, 2: -2.083725330281217}}}
+127.0.0.1 - - [02/Jun/2018 00:12:58] "[1m[35mPOST /orsen HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\orsen.py", line 108, in orsen
+    extract_info(rawTextQuery)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\run.py", line 47, in extract_info
+    sentences[curr] = infoextraction.coref_resolution(sent, sentences[curr], sentences[curr], world, True)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\inputprocessor\infoextraction.py", line 647, in coref_resolution
+    high_pair_index = pair_sc_lib.index(max(pair_sc_lib))
+ValueError: max() arg is an empty sequence
+ * Detected change in 'C:\\Users\\Bryan\\Documents\\Projects\\Orsen\\src\\run.py', reloading
+ * Restarting with stat
+O: Hello, I am ORSEN. Let's start.
+
+<src.objects.storyworld.World.World object at 0x083FB350>
+[]
+{}
+{}
+I:
+O: I don't think I heard you. Can you say that last part again?
+
+<src.objects.storyworld.World.World object at 0x083FB350>
+[]
+{}
+{}
+Traceback (most recent call last):
+  File "orsen.py", line 1, in <module>
+    from src.run import extract_info, new_world
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\run.py", line 104, in <module>
+    retrieved = DialoguePlanner.retrieve_output(text, world_id)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DialoguePlanner.py", line 79, in retrieve_output
+    output = generate_response(choice, world, [], coreferenced_text)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DialoguePlanner.py", line 163, in generate_response
+    choices = DBO_Move.get_templates_of_type(DBO_Move.TYPE_SPECIFIC_PUMP)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DBO_Move.py", line 69, in get_templates_of_type
+    conn = SqlConnConcepts.get_connection()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\db\SqlConnector.py", line 35, in get_connection
+    SqlConnConcepts.schema)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 699, in __init__
+    self.connect()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 936, in connect
+    self._request_authentication()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 1156, in _request_authentication
+    auth_packet = self._read_packet()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>python orsen.py
+O: Hello, I am ORSEN. Let's start.
+Traceback (most recent call last):
+  File "orsen.py", line 1, in <module>
+    from src.run import extract_info, new_world
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\run.py", line 99, in <module>
+    text = input("O: " + output + "\n")
+KeyboardInterrupt
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>python orsen.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 209-107-498
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+STORY ID  0
+127.0.0.1 - - [02/Jun/2018 00:38:22] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B313FB0>
+test
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  test
+current index:  0
+oops
+['test']
+test
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+{}
+{}
+127.0.0.1 - - [02/Jun/2018 00:38:35] "[1m[35mPOST /orsen HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\orsen.py", line 111, in orsen
+    retrieved = retrieve_output(rawTextQuery, storyId)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DialoguePlanner.py", line 94, in retrieve_output
+    output = generate_response(choice, world, [], coreferenced_text)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DialoguePlanner.py", line 136, in generate_response
+    pre_choices = DBO_Move.get_templates_of_type(DBO_Move.TYPE_FEEDBACK)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\dialoguemanager\DBO_Move.py", line 69, in get_templates_of_type
+    conn = SqlConnConcepts.get_connection()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\db\SqlConnector.py", line 35, in get_connection
+    SqlConnConcepts.schema)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 699, in __init__
+    self.connect()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 936, in connect
+    self._request_authentication()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 1156, in _request_authentication
+    auth_packet = self._read_packet()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+ * Detected change in 'C:\\Users\\Bryan\\Documents\\Projects\\Orsen\\src\\db\\SqlConnector.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 209-107-498
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+STORY ID  0
+127.0.0.1 - - [02/Jun/2018 00:39:26] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B643FB0>
+test
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  test
+current index:  0
+oops
+['test']
+test
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+{}
+{}
+I:  test
+O:  Oh, so that's what happens.
+127.0.0.1 - - [02/Jun/2018 00:39:36] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>python orsen.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 209-107-498
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+STORY ID  0
+127.0.0.1 - - [02/Jun/2018 00:40:04] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+STORY ID  1
+127.0.0.1 - - [02/Jun/2018 00:40:50] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0AD136D0>
+once upon a time there was a beautiful princess named slow y
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+OWN CODE
+['once', 'upon', 'a', 'time', 'there', 'was', 'a', 'beautiful', 'princess', 'named', 'slow', 'y']
+returned:  once upon a time there was a beautiful princess named slow time
+current index:  0
+oops
+['once upon a time there was a beautiful princess named slow time']
+once upon a time there was a beautiful princess named slow time
+CHILD advmod
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  expl  not included in the list
+CHILD attr
+ADDED princess
+LIST OF ATTR ['beautiful']
+ADD beautiful TO princess
+ ---------------------- ADDED IT ------------------------
+LIST OF ATTR ['princess']
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  advmod  not included in the list
+CHILD npadvmod
+ERROR: Cannot find current index or node  npadvmod  has been recorded
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+{}
+{'princess': <src.objects.storyworld.Object.Object object at 0x1822B9D0>}
+OBJECT princess:
+Name: princess
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': 'time'}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1822BDB0>]
+attr HasProperty beautiful
+SETTING #time:
+Name: time
+Type: TIME
+
+I:  once upon a time there was a beautiful princess named slow y
+O:  Oh, so that's what happens.
+127.0.0.1 - - [02/Jun/2018 00:41:06] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0AD136D0>
+she was kind and gentle and a friend to all animals
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {0: -0.5201074890294183, 1: 1.6284162971354967, 2: 1.7824331515068246, 3: 1.822865142704614}, 'pair_scores': {0: {}, 1: {0: -1.7206469376025488}, 2: {0: -1.7684670693236586, 1: -1.503415571960656}, 3: {0: -4.092170322743362, 1: -1.4991063425599553, 2: -2.083725330281217}}}
+127.0.0.1 - - [02/Jun/2018 00:41:17] "[1m[35mPOST /orsen HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\orsen.py", line 108, in orsen
+    extract_info(rawTextQuery)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\run.py", line 45, in extract_info
+    sentences[curr] = infoextraction.coref_resolution(sent, sentences[curr], sentences[curr], world, True)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\inputprocessor\infoextraction.py", line 659, in coref_resolution
+    high_pair_index = pair_sc_lib.index(max(pair_sc_lib))
+ValueError: max() arg is an empty sequence
+
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>
+(venv) C:\Users\Bryan\Documents\Projects\Orsen>python orsen.py
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 209-107-498
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+STORY ID  0
+127.0.0.1 - - [02/Jun/2018 00:43:10] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+deep beneath the sea live the little mermaid named ariel
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  deep beneath the sea live the little mermaid named ariel
+current index:  0
+oops
+['deep beneath the sea live the little mermaid named ariel']
+deep beneath the sea live the little mermaid named ariel
+CHILD advmod
+WARNING: Dependecy  det  not included in the list
+CHILD nsubj
+ADDED mermaid
+LIST OF ATTR ['little']
+ADD little TO mermaid
+ ---------------------- ADDED IT ------------------------
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  advmod  not included in the list
+LIST OF ATTR ['ariel']
+ADD ariel TO mermaid
+ ---------------------- ADDED IT ------------------------
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  deep beneath the sea live the little mermaid named ariel
+O:  Oh I see!
+127.0.0.1 - - [02/Jun/2018 00:43:26] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+beloved exploring for underwater home with her friend flounder but dreamed of living on land as a human
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {0: 1.7374668511502263, 1: -0.18318258569062262, 2: 1.6720943465253568, 3: 1.8773775493247618, 4: 1.5993513372278754, 5: 1.7323533367862893, 6: 1.7782281955688242}, 'pair_scores': {0: {}, 1: {0: -2.08248794441905}, 2: {0: -1.559327216361243, 1: -1.736852293160342}, 3: {0: -1.5008406200199955, 1: -1.9878692549875558, 2: -1.5345179684284755}, 4: {0: -1.508387537150258, 1: -1.9961389536268777, 2: -1.501372026503891, 3: -1.5164802010939364}, 5: {0: -1.4971757868529563, 1: -2.9549742972984117, 2: -2.0674114605734006, 3: -1.5426601451884627, 4: -1.4989660779492737}, 6: {0: -1.5081211686247729, 1: -2.371308906881474, 2: -1.5487610737140665, 3: -1.516730063922042, 4: -1.5051793074215551, 5: -1.5059765582338274}}}
+[underwater home] [her]
+returned:  beloved exploring for underwater home with her friend flounder but dreamed of living on land as a human
+current index:  0
+oops
+['beloved exploring for underwater home with her friend flounder but dreamed of living on land as a human']
+beloved exploring for underwater home with her friend flounder but dreamed of living on land as a human
+WARNING: Dependecy  csubj  not included in the list
+WARNING: Dependecy  cc  not included in the list
+ADDED home
+LIST OF ATTR ['underwater']
+ADD underwater TO home
+ ---------------------- ADDED IT ------------------------
+WARNING: Dependecy  amod  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  beloved exploring for underwater home with her friend flounder but dreamed of living on land as a human
+O:  I see, so what happens next?
+127.0.0.1 - - [02/Jun/2018 00:43:40] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+ariel was always searching for human treasures
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  ariel was always searching for human treasures
+current index:  0
+oops
+['ariel was always searching for human treasures']
+ariel was always searching for human treasures
+CHILD nsubj
+ADDED ariel
+WARNING: Dependecy  aux  not included in the list
+CHILD advmod
+ADDED treasures
+LIST OF ATTR ['human']
+ADD human TO treasures
+ ---------------------- ADDED IT ------------------------
+WARNING: Dependecy  nsubj  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+event_char ['ariel']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x183E71D0>]
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:searching for
+REC:always
+R-ACTIONS:[]
+SETTING:None
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>, 'ariel': <src.objects.storyworld.Object.Object object at 0x183E7570>, 'treasures': <src.objects.storyworld.Object.Object object at 0x183E7610>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+OBJECT ariel:
+Name: ariel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7710>]
+attr CapableOf search False
+OBJECT treasures:
+Name: treasures
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7310>]
+attr HasProperty human
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  ariel was always searching for human treasures
+O:  I see, that's interesting.
+127.0.0.1 - - [02/Jun/2018 00:43:51] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+when she and her
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {0: 2.450121472636588, 1: -0.3832256543608258, 2: -0.7562695210026416}, 'pair_scores': {0: {}, 1: {0: -2.0925581834359357}, 2: {0: -2.035109578632378, 1: 5.070547748658626}}}
+returned:  when she and her
+current index:  0
+oops
+['when she and her']
+when she and her
+CHILD advmod
+WARNING: Dependecy  cc  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x183E71D0>]
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:searching for
+REC:always
+R-ACTIONS:[]
+SETTING:None
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>, 'ariel': <src.objects.storyworld.Object.Object object at 0x183E7570>, 'treasures': <src.objects.storyworld.Object.Object object at 0x183E7610>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+OBJECT ariel:
+Name: ariel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7710>]
+attr CapableOf search False
+OBJECT treasures:
+Name: treasures
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7310>]
+attr HasProperty human
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  when she and her
+O:  I want to know more.
+127.0.0.1 - - [02/Jun/2018 00:43:59] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+when to the service to five scuttle the seagull
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  when to the service to five scuttle the seagull
+current index:  0
+oops
+['when to the service to five scuttle the seagull']
+when to the service to five scuttle the seagull
+CHILD advmod
+ADDED service
+WARNING: Dependecy  det  not included in the list
+ADDED scuttle
+LIST OF ATTR ['five']
+ADD five TO scuttle
+ ---------------------- ADDED IT ------------------------
+WARNING: Dependecy  advmod  not included in the list
+ADDED seagull
+WARNING: Dependecy  det  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x183E71D0>]
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:searching for
+REC:always
+R-ACTIONS:[]
+SETTING:None
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>, 'ariel': <src.objects.storyworld.Object.Object object at 0x183E7570>, 'treasures': <src.objects.storyworld.Object.Object object at 0x183E7610>, 'service': <src.objects.storyworld.Object.Object object at 0x176E7B30>, 'scuttle': <src.objects.storyworld.Object.Object object at 0x176E7E30>, 'seagull': <src.objects.storyworld.Object.Object object at 0x176E7770>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+OBJECT ariel:
+Name: ariel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7710>]
+attr CapableOf search False
+OBJECT treasures:
+Name: treasures
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7310>]
+attr HasProperty human
+OBJECT service:
+Name: service
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT scuttle:
+Name: scuttle
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x176E74B0>]
+attr HasProperty five
+OBJECT seagull:
+Name: seagull
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  when to the service to five scuttle the seagull
+O:  Tell me more then.
+127.0.0.1 - - [02/Jun/2018 00:44:08] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+ariel's father was a king triton ruler of the sea
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  ariel's father was a king triton ruler of the sea
+current index:  0
+oops
+["ariel's father was a king triton ruler of the sea"]
+ariel's father was a king triton ruler of the sea
+CHILD nsubj
+ADDED father
+LIST OF ATTR ['father']
+ADD father TO ariel
+ ---------------------- ADDED IT ------------------------
+CHILD attr
+ADDED king ruler
+LIST OF ATTR ['king ruler']
+ADD king ruler TO ariel
+ ---------------------- ADDED IT ------------------------
+LIST OF ATTR ['king ruler']
+ADD king ruler TO father
+ ---------------------- ADDED IT ------------------------
+RELATION IsA
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  poss  not included in the list
+WARNING: Dependecy  compound  not included in the list
+WARNING: Dependecy  det  not included in the list
+ERROR: Cannot find current index or node  attr  has been recorded
+-------------- Entering EVENT EXTRACTION -----------------
+event_char ['father']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x183E71D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0BC34090>]
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:searching for
+REC:always
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:father
+D-ACTIONS:father:was
+REC:king ruler
+R-ACTIONS:[]
+SETTING:None
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>, 'ariel': <src.objects.storyworld.Object.Object object at 0x183E7570>, 'treasures': <src.objects.storyworld.Object.Object object at 0x183E7610>, 'service': <src.objects.storyworld.Object.Object object at 0x176E7B30>, 'scuttle': <src.objects.storyworld.Object.Object object at 0x176E7E30>, 'seagull': <src.objects.storyworld.Object.Object object at 0x176E7770>, 'father': <src.objects.storyworld.Object.Object object at 0x0BC34BB0>, 'king ruler': <src.objects.storyworld.Object.Object object at 0x0BC34030>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+OBJECT ariel:
+Name: ariel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7710>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC34EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC340B0>]
+attr CapableOf search False
+attr Has father
+attr Has king ruler
+OBJECT treasures:
+Name: treasures
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7310>]
+attr HasProperty human
+OBJECT service:
+Name: service
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT scuttle:
+Name: scuttle
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x176E74B0>]
+attr HasProperty five
+OBJECT seagull:
+Name: seagull
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT father:
+Name: father
+Type: ['king ruler']
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0BC34170>]
+attr IsA king ruler
+OBJECT king ruler:
+Name: king ruler
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  ariel's father was a king triton ruler of the sea
+O:  Oh I see!
+127.0.0.1 - - [02/Jun/2018 00:44:19] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+hot humans with a dress
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  hot humans with a dress
+current index:  0
+oops
+['hot humans with a dress']
+hot humans with a dress
+WARNING: Dependecy  amod  not included in the list
+ADDED dress
+WARNING: Dependecy  det  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x183E71D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0BC34090>]
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:searching for
+REC:always
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:father
+D-ACTIONS:father:was
+REC:king ruler
+R-ACTIONS:[]
+SETTING:None
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>, 'ariel': <src.objects.storyworld.Object.Object object at 0x183E7570>, 'treasures': <src.objects.storyworld.Object.Object object at 0x183E7610>, 'service': <src.objects.storyworld.Object.Object object at 0x176E7B30>, 'scuttle': <src.objects.storyworld.Object.Object object at 0x176E7E30>, 'seagull': <src.objects.storyworld.Object.Object object at 0x176E7770>, 'father': <src.objects.storyworld.Object.Object object at 0x0BC34BB0>, 'king ruler': <src.objects.storyworld.Object.Object object at 0x0BC34030>, 'dress': <src.objects.storyworld.Object.Object object at 0x0BB7F630>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+OBJECT ariel:
+Name: ariel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7710>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC34EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC340B0>]
+attr CapableOf search False
+attr Has father
+attr Has king ruler
+OBJECT treasures:
+Name: treasures
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7310>]
+attr HasProperty human
+OBJECT service:
+Name: service
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT scuttle:
+Name: scuttle
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x176E74B0>]
+attr HasProperty five
+OBJECT seagull:
+Name: seagull
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT father:
+Name: father
+Type: ['king ruler']
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0BC34170>]
+attr IsA king ruler
+OBJECT king ruler:
+Name: king ruler
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT dress:
+Name: dress
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  hot humans with a dress
+O:  I want to know more.
+127.0.0.1 - - [02/Jun/2018 00:44:26] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+material has been to the surface
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  material has been to the surface
+current index:  0
+oops
+['material has been to the surface']
+material has been to the surface
+CHILD nsubj
+ADDED material
+WARNING: Dependecy  aux  not included in the list
+ADDED surface
+WARNING: Dependecy  det  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+event_char ['material']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x183E71D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0BC34090>, <src.objects.eventchain.EventFrame.EventFrame object at 0x011376B0>]
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:searching for
+REC:always
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:father
+D-ACTIONS:father:was
+REC:king ruler
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:material
+D-ACTIONS:material:been to
+REC:surface
+R-ACTIONS:[]
+SETTING:None
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>, 'ariel': <src.objects.storyworld.Object.Object object at 0x183E7570>, 'treasures': <src.objects.storyworld.Object.Object object at 0x183E7610>, 'service': <src.objects.storyworld.Object.Object object at 0x176E7B30>, 'scuttle': <src.objects.storyworld.Object.Object object at 0x176E7E30>, 'seagull': <src.objects.storyworld.Object.Object object at 0x176E7770>, 'father': <src.objects.storyworld.Object.Object object at 0x0BC34BB0>, 'king ruler': <src.objects.storyworld.Object.Object object at 0x0BC34030>, 'dress': <src.objects.storyworld.Object.Object object at 0x0BB7F630>, 'material': <src.objects.storyworld.Object.Object object at 0x011371F0>, 'surface': <src.objects.storyworld.Object.Object object at 0x01137370>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+OBJECT ariel:
+Name: ariel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7710>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC34EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC340B0>]
+attr CapableOf search False
+attr Has father
+attr Has king ruler
+OBJECT treasures:
+Name: treasures
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7310>]
+attr HasProperty human
+OBJECT service:
+Name: service
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT scuttle:
+Name: scuttle
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x176E74B0>]
+attr HasProperty five
+OBJECT seagull:
+Name: seagull
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT father:
+Name: father
+Type: ['king ruler']
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0BC34170>]
+attr IsA king ruler
+OBJECT king ruler:
+Name: king ruler
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT dress:
+Name: dress
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT material:
+Name: material
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT surface:
+Name: surface
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  material has been to the surface
+O:  Tell me more then.
+127.0.0.1 - - [02/Jun/2018 00:44:36] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+then he asks fashion the crab keep an eye on her
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+OWN CODE
+['then', 'he', 'asks', 'fashion', 'the', 'crab', 'keep', 'an', 'eye', 'on', 'her']
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+OWN CODE
+['then', 'he', 'asks', 'fashion', 'the', 'crab', 'keep', 'an', 'eye', 'on', 'her']
+returned:  then he asks fashion the crab keep an eye on fashion's
+current index:  0
+oops
+["then he asks fashion the crab keep an eye on fashion's"]
+then he asks fashion the crab keep an eye on fashion's
+CHILD advmod
+CHILD nsubj
+ADDED he
+CHILD dobj
+ADDED fashion
+CHILD nsubj
+ADDED crab
+WARNING: Dependecy  det  not included in the list
+CHILD dobj
+ADDED eye
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+event_char ['he']
+event_char ['he', 'crab']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x183E71D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0BC34090>, <src.objects.eventchain.EventFrame.EventFrame object at 0x011376B0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0CEC68D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0CEC6970>]
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:searching for
+REC:always
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:father
+D-ACTIONS:father:was
+REC:king ruler
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:material
+D-ACTIONS:material:been to
+REC:surface
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:he
+D-ACTIONS:he:asks
+REC:then
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:crab
+D-ACTIONS:crab:keep
+REC:None
+R-ACTIONS:[]
+SETTING:None
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>, 'ariel': <src.objects.storyworld.Object.Object object at 0x183E7570>, 'treasures': <src.objects.storyworld.Object.Object object at 0x183E7610>, 'service': <src.objects.storyworld.Object.Object object at 0x176E7B30>, 'scuttle': <src.objects.storyworld.Object.Object object at 0x176E7E30>, 'seagull': <src.objects.storyworld.Object.Object object at 0x176E7770>, 'father': <src.objects.storyworld.Object.Object object at 0x0BC34BB0>, 'king ruler': <src.objects.storyworld.Object.Object object at 0x0BC34030>, 'dress': <src.objects.storyworld.Object.Object object at 0x0BB7F630>, 'material': <src.objects.storyworld.Object.Object object at 0x011371F0>, 'surface': <src.objects.storyworld.Object.Object object at 0x01137370>, 'he': <src.objects.storyworld.Object.Object object at 0x0CEC6810>, 'fashion': <src.objects.storyworld.Object.Object object at 0x0CEC66D0>, 'crab': <src.objects.storyworld.Object.Object object at 0x0CEC6790>, 'eye': <src.objects.storyworld.Object.Object object at 0x0CEC6510>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+OBJECT ariel:
+Name: ariel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7710>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC34EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC340B0>]
+attr CapableOf search False
+attr Has father
+attr Has king ruler
+OBJECT treasures:
+Name: treasures
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7310>]
+attr HasProperty human
+OBJECT service:
+Name: service
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT scuttle:
+Name: scuttle
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x176E74B0>]
+attr HasProperty five
+OBJECT seagull:
+Name: seagull
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT father:
+Name: father
+Type: ['king ruler']
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0BC34170>]
+attr IsA king ruler
+OBJECT king ruler:
+Name: king ruler
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT dress:
+Name: dress
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT material:
+Name: material
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT surface:
+Name: surface
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT he:
+Name: he
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0CEC60D0>]
+attr CapableOf ask False
+OBJECT fashion:
+Name: fashion
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT crab:
+Name: crab
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0CEC68F0>]
+attr CapableOf keep False
+OBJECT eye:
+Name: eye
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #sea:
+Name: sea
+Type: LOC
+
+<src.objects.storyworld.World.World object at 0x0B254F50>
+There is baby in crib.
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  There is baby in crib.
+current index:  0
+oops
+['There is baby in crib.']
+There is baby in crib.
+WARNING: Dependecy  expl  not included in the list
+CHILD attr
+ADDED baby
+LIST OF ATTR ['baby']
+ADDED crib
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x183E71D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0BC34090>, <src.objects.eventchain.EventFrame.EventFrame object at 0x011376B0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0CEC68D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0CEC6970>]
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:searching for
+REC:always
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:father
+D-ACTIONS:father:was
+REC:king ruler
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:material
+D-ACTIONS:material:been to
+REC:surface
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:he
+D-ACTIONS:he:asks
+REC:then
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:crab
+D-ACTIONS:crab:keep
+REC:None
+R-ACTIONS:[]
+SETTING:None
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>, 'ariel': <src.objects.storyworld.Object.Object object at 0x183E7570>, 'treasures': <src.objects.storyworld.Object.Object object at 0x183E7610>, 'service': <src.objects.storyworld.Object.Object object at 0x176E7B30>, 'scuttle': <src.objects.storyworld.Object.Object object at 0x176E7E30>, 'seagull': <src.objects.storyworld.Object.Object object at 0x176E7770>, 'father': <src.objects.storyworld.Object.Object object at 0x0BC34BB0>, 'king ruler': <src.objects.storyworld.Object.Object object at 0x0BC34030>, 'dress': <src.objects.storyworld.Object.Object object at 0x0BB7F630>, 'material': <src.objects.storyworld.Object.Object object at 0x011371F0>, 'surface': <src.objects.storyworld.Object.Object object at 0x01137370>, 'he': <src.objects.storyworld.Object.Object object at 0x0CEC6810>, 'fashion': <src.objects.storyworld.Object.Object object at 0x0CEC66D0>, 'crab': <src.objects.storyworld.Object.Object object at 0x0CEC6790>, 'eye': <src.objects.storyworld.Object.Object object at 0x0CEC6510>, 'baby': <src.objects.storyworld.Object.Object object at 0x1A9B9C90>, 'crib': <src.objects.storyworld.Object.Object object at 0x1A9B9D70>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+OBJECT ariel:
+Name: ariel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7710>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC34EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC340B0>]
+attr CapableOf search False
+attr Has father
+attr Has king ruler
+OBJECT treasures:
+Name: treasures
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7310>]
+attr HasProperty human
+OBJECT service:
+Name: service
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT scuttle:
+Name: scuttle
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x176E74B0>]
+attr HasProperty five
+OBJECT seagull:
+Name: seagull
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT father:
+Name: father
+Type: ['king ruler']
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0BC34170>]
+attr IsA king ruler
+OBJECT king ruler:
+Name: king ruler
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT dress:
+Name: dress
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT material:
+Name: material
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT surface:
+Name: surface
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT he:
+Name: he
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0CEC60D0>]
+attr CapableOf ask False
+OBJECT fashion:
+Name: fashion
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT crab:
+Name: crab
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0CEC68F0>]
+attr CapableOf keep False
+OBJECT eye:
+Name: eye
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT baby:
+Name: baby
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT crib:
+Name: crib
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  then he asks fashion the crab keep an eye on her
+O:  There is baby in crib.
+127.0.0.1 - - [02/Jun/2018 00:44:47] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+ariel continued to go to the surface
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  ariel continued to go to the surface
+current index:  0
+oops
+['ariel continued to go to the surface']
+ariel continued to go to the surface
+CHILD nsubj
+CHILD xcomp
+ENTERING 0
+WARNING: Dependecy  aux  not included in the list
+WARNING: Dependecy  aux  not included in the list
+ERROR: Cannot find current index or node  xcomp  has been recorded
+-------------- Entering EVENT EXTRACTION -----------------
+event_char ['ariel']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x183E71D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0BC34090>, <src.objects.eventchain.EventFrame.EventFrame object at 0x011376B0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0CEC68D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0CEC6970>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0BB41F10>]
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:searching for
+REC:always
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:father
+D-ACTIONS:father:was
+REC:king ruler
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:material
+D-ACTIONS:material:been to
+REC:surface
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:he
+D-ACTIONS:he:asks
+REC:then
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:crab
+D-ACTIONS:crab:keep
+REC:None
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:go to
+REC:to go
+R-ACTIONS:[]
+SETTING:None
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>, 'ariel': <src.objects.storyworld.Object.Object object at 0x183E7570>, 'treasures': <src.objects.storyworld.Object.Object object at 0x183E7610>, 'service': <src.objects.storyworld.Object.Object object at 0x176E7B30>, 'scuttle': <src.objects.storyworld.Object.Object object at 0x176E7E30>, 'seagull': <src.objects.storyworld.Object.Object object at 0x176E7770>, 'father': <src.objects.storyworld.Object.Object object at 0x0BC34BB0>, 'king ruler': <src.objects.storyworld.Object.Object object at 0x0BC34030>, 'dress': <src.objects.storyworld.Object.Object object at 0x0BB7F630>, 'material': <src.objects.storyworld.Object.Object object at 0x011371F0>, 'surface': <src.objects.storyworld.Object.Object object at 0x01137370>, 'he': <src.objects.storyworld.Object.Object object at 0x0CEC6810>, 'fashion': <src.objects.storyworld.Object.Object object at 0x0CEC66D0>, 'crab': <src.objects.storyworld.Object.Object object at 0x0CEC6790>, 'eye': <src.objects.storyworld.Object.Object object at 0x0CEC6510>, 'baby': <src.objects.storyworld.Object.Object object at 0x1A9B9C90>, 'crib': <src.objects.storyworld.Object.Object object at 0x1A9B9D70>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+OBJECT ariel:
+Name: ariel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 4
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7710>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC34EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC340B0>, <src.objects.storyworld.Attribute.Attribute object at 0x0BB41E70>, <src.objects.storyworld.Attribute.Attribute object at 0x0BB41FD0>]
+attr CapableOf search False
+attr Has father
+attr Has king ruler
+attr CapableOf continue False
+attr CapableOf go False
+OBJECT treasures:
+Name: treasures
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7310>]
+attr HasProperty human
+OBJECT service:
+Name: service
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT scuttle:
+Name: scuttle
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x176E74B0>]
+attr HasProperty five
+OBJECT seagull:
+Name: seagull
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT father:
+Name: father
+Type: ['king ruler']
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0BC34170>]
+attr IsA king ruler
+OBJECT king ruler:
+Name: king ruler
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT dress:
+Name: dress
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT material:
+Name: material
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT surface:
+Name: surface
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT he:
+Name: he
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0CEC60D0>]
+attr CapableOf ask False
+OBJECT fashion:
+Name: fashion
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT crab:
+Name: crab
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0CEC68F0>]
+attr CapableOf keep False
+OBJECT eye:
+Name: eye
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT baby:
+Name: baby
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT crib:
+Name: crib
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  ariel continued to go to the surface
+O:  I want to know more.
+127.0.0.1 - - [02/Jun/2018 00:44:59] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+1 night
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  1 night
+current index:  0
+oops
+['1 night']
+1 night
+WARNING: Dependecy  nummod  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x183E71D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0BC34090>, <src.objects.eventchain.EventFrame.EventFrame object at 0x011376B0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0CEC68D0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0CEC6970>, <src.objects.eventchain.EventFrame.EventFrame object at 0x0BB41F10>]
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:searching for
+REC:always
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:father
+D-ACTIONS:father:was
+REC:king ruler
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:material
+D-ACTIONS:material:been to
+REC:surface
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:he
+D-ACTIONS:he:asks
+REC:then
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:crab
+D-ACTIONS:crab:keep
+REC:None
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:ariel
+D-ACTIONS:ariel:go to
+REC:to go
+R-ACTIONS:[]
+SETTING:None
+{}
+{'mermaid': <src.objects.storyworld.Object.Object object at 0x1855B690>, 'home': <src.objects.storyworld.Object.Object object at 0x28415450>, 'ariel': <src.objects.storyworld.Object.Object object at 0x183E7570>, 'treasures': <src.objects.storyworld.Object.Object object at 0x183E7610>, 'service': <src.objects.storyworld.Object.Object object at 0x176E7B30>, 'scuttle': <src.objects.storyworld.Object.Object object at 0x176E7E30>, 'seagull': <src.objects.storyworld.Object.Object object at 0x176E7770>, 'father': <src.objects.storyworld.Object.Object object at 0x0BC34BB0>, 'king ruler': <src.objects.storyworld.Object.Object object at 0x0BC34030>, 'dress': <src.objects.storyworld.Object.Object object at 0x0BB7F630>, 'material': <src.objects.storyworld.Object.Object object at 0x011371F0>, 'surface': <src.objects.storyworld.Object.Object object at 0x01137370>, 'he': <src.objects.storyworld.Object.Object object at 0x0CEC6810>, 'fashion': <src.objects.storyworld.Object.Object object at 0x0CEC66D0>, 'crab': <src.objects.storyworld.Object.Object object at 0x0CEC6790>, 'eye': <src.objects.storyworld.Object.Object object at 0x0CEC6510>, 'baby': <src.objects.storyworld.Object.Object object at 0x1A9B9C90>, 'crib': <src.objects.storyworld.Object.Object object at 0x1A9B9D70>}
+OBJECT mermaid:
+Name: mermaid
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x1855BDF0>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B870>, <src.objects.storyworld.Attribute.Attribute object at 0x1855B8B0>]
+attr HasProperty little
+attr CapableOf live False
+attr HasProperty ariel
+OBJECT home:
+Name: home
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x28415A90>]
+attr HasProperty underwater
+OBJECT ariel:
+Name: ariel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 4
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7710>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC34EB0>, <src.objects.storyworld.Attribute.Attribute object at 0x0BC340B0>, <src.objects.storyworld.Attribute.Attribute object at 0x0BB41E70>, <src.objects.storyworld.Attribute.Attribute object at 0x0BB41FD0>]
+attr CapableOf search False
+attr Has father
+attr Has king ruler
+attr CapableOf continue False
+attr CapableOf go False
+OBJECT treasures:
+Name: treasures
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183E7310>]
+attr HasProperty human
+OBJECT service:
+Name: service
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT scuttle:
+Name: scuttle
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x176E74B0>]
+attr HasProperty five
+OBJECT seagull:
+Name: seagull
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT father:
+Name: father
+Type: ['king ruler']
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0BC34170>]
+attr IsA king ruler
+OBJECT king ruler:
+Name: king ruler
+Type: []
+inSetting: {'LOC': 'sea', 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT dress:
+Name: dress
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT material:
+Name: material
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT surface:
+Name: surface
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT he:
+Name: he
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0CEC60D0>]
+attr CapableOf ask False
+OBJECT fashion:
+Name: fashion
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[]
+OBJECT crab:
+Name: crab
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x0CEC68F0>]
+attr CapableOf keep False
+OBJECT eye:
+Name: eye
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT baby:
+Name: baby
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT crib:
+Name: crib
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+SETTING #sea:
+Name: sea
+Type: LOC
+
+I:  1 night
+O:  Tell me more then.
+127.0.0.1 - - [02/Jun/2018 00:45:05] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0B254F50>
+ariel cold prince eric 24 and sam kim
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  ariel cold prince eric 24 and sam kim
+current index:  0
+oops
+['ariel cold prince eric 24 and sam kim']
+ariel cold prince eric 24 and sam kim
+CHILD nsubj
+ADDED prince
+LIST OF ATTR ['ariel']
+ADD ariel TO prince
+ ---------------------- ADDED IT ------------------------
+LIST OF ATTR ['cold']
+ADD cold TO prince
+ ---------------------- ADDED IT ------------------------
+WARNING: Dependecy  nummod  not included in the list
+WARNING: Dependecy  cc  not included in the list
+WARNING: Dependecy  compound  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+127.0.0.1 - - [02/Jun/2018 00:45:17] "[1m[35mPOST /orsen HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\orsen.py", line 108, in orsen
+    extract_info(rawTextQuery)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\run.py", line 63, in extract_info
+    infoextraction.event_extraction(s, world, "ROOT")
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\inputprocessor\infoextraction.py", line 901, in event_extraction
+    event_char_action.append(hold_char_action[0])
+UnboundLocalError: local variable 'hold_char_action' referenced before assignment
+ * Detected change in 'C:\\Users\\Bryan\\Documents\\Projects\\Orsen\\orsen.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 209-107-498
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+STORY ID  0
+127.0.0.1 - - [02/Jun/2018 00:56:08] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0AEE4250>
+help me
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+returned:  help me
+current index:  0
+oops
+['help me']
+help me
+CHILD dobj
+ADDED me
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+{}
+{'me': <src.objects.storyworld.Object.Object object at 0x183CD890>}
+OBJECT me:
+Name: me
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+I:  help me
+O:  I see, that's interesting.
+127.0.0.1 - - [02/Jun/2018 00:56:23] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0AEE4250>
+michigan
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  michigan
+current index:  0
+oops
+['michigan']
+michigan
+-------------- Entering EVENT EXTRACTION -----------------
+[]
+{}
+{'me': <src.objects.storyworld.Object.Object object at 0x183CD890>}
+OBJECT me:
+Name: me
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+I:  michigan
+O:  Oh I see!
+127.0.0.1 - - [02/Jun/2018 00:56:32] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0AEE4250>
+arson helped me
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+OWN CODE
+['arson', 'helped', 'me']
+returned:  arson helped arson
+current index:  0
+oops
+['arson helped arson']
+arson helped arson
+CHILD nsubj
+ADDED arson
+CHILD dobj
+-------------- Entering EVENT EXTRACTION -----------------
+event_char ['arson']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x17732FD0>]
+-1--1
+DOER:arson
+D-ACTIONS:arson:helped
+REC:arson
+R-ACTIONS:[]
+SETTING:None
+{}
+{'me': <src.objects.storyworld.Object.Object object at 0x183CD890>, 'arson': <src.objects.storyworld.Object.Object object at 0x17732E70>}
+OBJECT me:
+Name: me
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT arson:
+Name: arson
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17732E10>]
+attr CapableOf help False
+I:  arson helped me
+O:  I see, that's interesting.
+127.0.0.1 - - [02/Jun/2018 00:56:39] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0AEE4250>
+plaintext lang
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  plaintext lang
+current index:  0
+oops
+['plaintext lang']
+plaintext lang
+WARNING: Dependecy  compound  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x17732FD0>]
+-1--1
+DOER:arson
+D-ACTIONS:arson:helped
+REC:arson
+R-ACTIONS:[]
+SETTING:None
+{}
+{'me': <src.objects.storyworld.Object.Object object at 0x183CD890>, 'arson': <src.objects.storyworld.Object.Object object at 0x17732E70>}
+OBJECT me:
+Name: me
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT arson:
+Name: arson
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17732E10>]
+attr CapableOf help False
+I:  plaintext lang
+O:  I want to know more.
+127.0.0.1 - - [02/Jun/2018 00:56:51] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [02/Jun/2018 00:56:56] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0AEE4250>
+listen
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  listen
+current index:  0
+oops
+['listen']
+listen
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x17732FD0>]
+-1--1
+DOER:arson
+D-ACTIONS:arson:helped
+REC:arson
+R-ACTIONS:[]
+SETTING:None
+{}
+{'me': <src.objects.storyworld.Object.Object object at 0x183CD890>, 'arson': <src.objects.storyworld.Object.Object object at 0x17732E70>}
+OBJECT me:
+Name: me
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT arson:
+Name: arson
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17732E10>]
+attr CapableOf help False
+I:  listen
+O:  I want to know more.
+127.0.0.1 - - [02/Jun/2018 00:57:04] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [02/Jun/2018 00:57:15] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x0AEE4250>
+What if cuckold is husband.
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  What if cuckold is husband.
+current index:  0
+oops
+['What if cuckold is husband.']
+What if cuckold is husband.
+CHILD attr
+ADDED what
+LIST OF ATTR ['what']
+WARNING: Dependecy  csubj  not included in the list
+CHILD attr
+ADDED husband
+LIST OF ATTR ['husband']
+ADD husband TO what
+ ---------------------- ADDED IT ------------------------
+RELATION IsA
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x17732FD0>]
+-1--1
+DOER:arson
+D-ACTIONS:arson:helped
+REC:arson
+R-ACTIONS:[]
+SETTING:None
+{}
+{'me': <src.objects.storyworld.Object.Object object at 0x183CD890>, 'arson': <src.objects.storyworld.Object.Object object at 0x17732E70>, 'what': <src.objects.storyworld.Object.Object object at 0x17CD2970>, 'husband': <src.objects.storyworld.Object.Object object at 0x17CD2DB0>}
+OBJECT me:
+Name: me
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT arson:
+Name: arson
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 2
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17732E10>]
+attr CapableOf help False
+OBJECT what:
+Name: what
+Type: ['husband']
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17CD2390>]
+attr IsA husband
+OBJECT husband:
+Name: husband
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+127.0.0.1 - - [02/Jun/2018 00:57:30] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+127.0.0.1 - - [02/Jun/2018 00:57:42] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+STORY ID  1
+127.0.0.1 - - [02/Jun/2018 00:57:58] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x17C4BBB0>
+logo of king and queen had a baby daughter named rapunzel
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  logo of king and queen had a baby daughter named rapunzel
+current index:  0
+oops
+['logo of king and queen had a baby daughter named rapunzel']
+logo of king and queen had a baby daughter named rapunzel
+CHILD nsubj
+ADDED logo
+ADDED king
+ADDED queen
+WARNING: Dependecy  cc  not included in the list
+WARNING: Dependecy  nsubj  not included in the list
+CHILD dobj
+ADDED baby daughter
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  nsubj  not included in the list
+LIST OF ATTR ['rapunzel']
+ADD rapunzel TO logo
+ ---------------------- ADDED IT ------------------------
+-------------- Entering EVENT EXTRACTION -----------------
+event_char ['logo']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x17C9C930>]
+-1--1
+DOER:logo
+D-ACTIONS:logo:had
+REC:king,queen
+R-ACTIONS:[]
+SETTING:None
+{}
+{'logo': <src.objects.storyworld.Object.Object object at 0x17C9CEF0>, 'king': <src.objects.storyworld.Object.Object object at 0x17C9C110>, 'queen': <src.objects.storyworld.Object.Object object at 0x17C9C850>, 'baby daughter': <src.objects.storyworld.Object.Object object at 0x17C9C530>}
+OBJECT logo:
+Name: logo
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17C9C490>, <src.objects.storyworld.Attribute.Attribute object at 0x17C9C3F0>]
+attr CapableOf have False
+attr HasProperty rapunzel
+OBJECT king:
+Name: king
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT queen:
+Name: queen
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT baby daughter:
+Name: baby daughter
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+I:  logo of king and queen had a baby daughter named rapunzel
+O:  I see, that's interesting.
+127.0.0.1 - - [02/Jun/2018 00:58:14] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x17C4BBB0>
+what her devoted parents didn't know was that rapunzel's golden hair contain magical healing powers
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {}, 'pair_scores': {}}
+OWN CODE
+['what', 'her', 'devoted', 'parents', 'did', "n't", 'know', 'was', 'that', 'rapunzel', "'s", 'golden', 'hair', 'contain', 'magical', 'healing', 'powers']
+returned:  what what's devoted parents didn't know was that rapunzel's golden hair contain magical healing powers
+current index:  0
+oops
+["what what's devoted parents didn't know was that rapunzel's golden hair contain magical healing powers"]
+what what's devoted parents didn't know was that rapunzel's golden hair contain magical healing powers
+WARNING: Dependecy  csubj  not included in the list
+WARNING: Dependecy  mark  not included in the list
+CHILD nsubj
+ADDED hair
+ADDED rapunzel
+LIST OF ATTR ['hair']
+ADD hair TO rapunzel
+ ---------------------- ADDED IT ------------------------
+LIST OF ATTR ['golden']
+ADD golden TO hair
+ ---------------------- ADDED IT ------------------------
+WARNING: Dependecy  amod  not included in the list
+CHILD dobj
+ADDED healing powers
+LIST OF ATTR ['magical']
+ADD magical TO healing powers
+ ---------------------- ADDED IT ------------------------
+-------------- Entering EVENT EXTRACTION -----------------
+event_char ['what']
+event_char ['what', 'parents']
+event_char ['what', 'parents', 'hair']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x17C9C930>, <src.objects.eventchain.EventFrame.EventFrame object at 0x176031F0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x176033F0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x176033B0>]
+-1--1
+DOER:logo
+D-ACTIONS:logo:had
+REC:king,queen
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:what
+D-ACTIONS:what:'s
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:parents
+D-ACTIONS:parents:'s
+REC:None
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:hair
+D-ACTIONS:hair:contain
+REC:None
+R-ACTIONS:[]
+SETTING:None
+{}
+{'logo': <src.objects.storyworld.Object.Object object at 0x17C9CEF0>, 'king': <src.objects.storyworld.Object.Object object at 0x17C9C110>, 'queen': <src.objects.storyworld.Object.Object object at 0x17C9C850>, 'baby daughter': <src.objects.storyworld.Object.Object object at 0x17C9C530>, 'hair': <src.objects.storyworld.Object.Object object at 0x176037B0>, 'rapunzel': <src.objects.storyworld.Object.Object object at 0x176037D0>, 'healing powers': <src.objects.storyworld.Object.Object object at 0x17603790>}
+OBJECT logo:
+Name: logo
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17C9C490>, <src.objects.storyworld.Attribute.Attribute object at 0x17C9C3F0>]
+attr CapableOf have False
+attr HasProperty rapunzel
+OBJECT king:
+Name: king
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT queen:
+Name: queen
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT baby daughter:
+Name: baby daughter
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT hair:
+Name: hair
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17603850>, <src.objects.storyworld.Attribute.Attribute object at 0x17603AF0>]
+attr HasProperty golden
+attr CapableOf contain False
+OBJECT rapunzel:
+Name: rapunzel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17603870>]
+attr Has hair
+OBJECT healing powers:
+Name: healing powers
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17603CF0>]
+attr HasProperty magical
+<src.objects.storyworld.World.World object at 0x17C4BBB0>
+chest can storing family historical documents.
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+returned:  chest can storing family historical documents.
+current index:  0
+oops
+['chest can storing family historical documents.']
+chest can storing family historical documents.
+CHILD nsubj
+ADDED chest
+WARNING: Dependecy  aux  not included in the list
+CHILD dobj
+ADDED documents
+LIST OF ATTR ['historical']
+ADD historical TO documents
+ ---------------------- ADDED IT ------------------------
+WARNING: Dependecy  nmod  not included in the list
+WARNING: Dependecy  nsubj  not included in the list
+WARNING: Dependecy  punct  not included in the list
+-------------- Entering EVENT EXTRACTION -----------------
+event_char ['chest']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x17C9C930>, <src.objects.eventchain.EventFrame.EventFrame object at 0x176031F0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x176033F0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x176033B0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x183CDF30>]
+-1--1
+DOER:logo
+D-ACTIONS:logo:had
+REC:king,queen
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:what
+D-ACTIONS:what:'s
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:parents
+D-ACTIONS:parents:'s
+REC:None
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:hair
+D-ACTIONS:hair:contain
+REC:None
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:chest
+D-ACTIONS:chest:can storing
+REC:documents
+R-ACTIONS:[]
+SETTING:None
+{}
+{'logo': <src.objects.storyworld.Object.Object object at 0x17C9CEF0>, 'king': <src.objects.storyworld.Object.Object object at 0x17C9C110>, 'queen': <src.objects.storyworld.Object.Object object at 0x17C9C850>, 'baby daughter': <src.objects.storyworld.Object.Object object at 0x17C9C530>, 'hair': <src.objects.storyworld.Object.Object object at 0x176037B0>, 'rapunzel': <src.objects.storyworld.Object.Object object at 0x176037D0>, 'healing powers': <src.objects.storyworld.Object.Object object at 0x17603790>, 'chest': <src.objects.storyworld.Object.Object object at 0x183CD7D0>, 'documents': <src.objects.storyworld.Object.Object object at 0x183CD850>}
+OBJECT logo:
+Name: logo
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17C9C490>, <src.objects.storyworld.Attribute.Attribute object at 0x17C9C3F0>]
+attr CapableOf have False
+attr HasProperty rapunzel
+OBJECT king:
+Name: king
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT queen:
+Name: queen
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT baby daughter:
+Name: baby daughter
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT hair:
+Name: hair
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17603850>, <src.objects.storyworld.Attribute.Attribute object at 0x17603AF0>]
+attr HasProperty golden
+attr CapableOf contain False
+OBJECT rapunzel:
+Name: rapunzel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17603870>]
+attr Has hair
+OBJECT healing powers:
+Name: healing powers
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17603CF0>]
+attr HasProperty magical
+OBJECT chest:
+Name: chest
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183CD770>]
+attr CapableOf store False
+OBJECT documents:
+Name: documents
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183CDD10>]
+attr HasProperty historical
+I:  what her devoted parents didn't know was that rapunzel's golden hair contain magical healing powers
+O:  chest can storing family historical documents.
+127.0.0.1 - - [02/Jun/2018 00:58:29] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x17C4BBB0>
+selfish hold woman named mother gothel new the magic in rapunzel scared and wanted it to keep yourself young
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {it: new the magic in rapunzel}
+scores {'single_scores': {0: 1.8864438866977338, 1: 2.2794128083196004, 2: 1.7545168823856687, 3: 1.717257423550274, 4: 2.356670090359594, 5: -0.21572935793921932, 6: 0.3817876841901886}, 'pair_scores': {0: {}, 1: {0: -1.4967836384785727}, 2: {0: -1.596431110349675, 1: -1.5607687063752083}, 3: {0: -1.5763947952845057, 1: -1.5493545219799074, 2: -1.4950722175294173}, 4: {0: -1.6547817848046065, 1: -1.6008504977511806, 2: -1.5127423519665164, 3: -1.5519302212413943}, 5: {0: -2.401158663193348, 1: -1.7757830172598474, 2: -0.13034825721314558, 3: -1.0585835819456975, 4: -1.5773529451368802}, 6: {0: -1.6043102589771836, 1: -1.986158755015298, 2: -2.0782039626833533, 3: -2.0269907642545, 4: -1.9875522725428367, 5: -1.9988620833325799}}}
+rep {it: new the magic in rapunzel}
+scores {'single_scores': {0: 1.8864438866977338, 1: 2.2794128083196004, 2: 1.7545168823856687, 3: 1.717257423550274, 4: 2.356670090359594, 5: -0.21572935793921932, 6: 0.3817876841901886}, 'pair_scores': {0: {}, 1: {0: -1.4967836384785727}, 2: {0: -1.596431110349675, 1: -1.5607687063752083}, 3: {0: -1.5763947952845057, 1: -1.5493545219799074, 2: -1.4950722175294173}, 4: {0: -1.6547817848046065, 1: -1.6008504977511806, 2: -1.5127423519665164, 3: -1.5519302212413943}, 5: {0: -2.401158663193348, 1: -1.7757830172598474, 2: -0.13034825721314558, 3: -1.0585835819456975, 4: -1.5773529451368802}, 6: {0: -1.6043102589771836, 1: -1.986158755015298, 2: -2.0782039626833533, 3: -2.0269907642545, 4: -1.9875522725428367, 5: -1.9988620833325799}}}
+returned:  selfish hold woman named mother gothel new the magic in rapunzel scared and wanted new the magic in rapunzel to keep yourself young
+current index:  0
+oops
+['selfish hold woman named mother gothel new the magic in rapunzel scared and wanted new the magic in rapunzel to keep yourself young']
+selfish hold woman named mother gothel new the magic in rapunzel scared and wanted new the magic in rapunzel to keep yourself young
+CHILD nsubj
+ADDED hold woman
+LIST OF ATTR ['selfish']
+ADD selfish TO hold woman
+ ---------------------- ADDED IT ------------------------
+LIST OF ATTR ['selfish']
+ADD selfish TO hold woman
+WARNING: Dependecy  amod  not included in the list
+WARNING: Dependecy  amod  not included in the list
+LIST OF ATTR ['mother']
+ADD mother TO hold woman
+ ---------------------- ADDED IT ------------------------
+CHILD dobj
+ADDED magic
+LIST OF ATTR ['new']
+ADD new TO magic
+ ---------------------- ADDED IT ------------------------
+WARNING: Dependecy  amod  not included in the list
+WARNING: Dependecy  det  not included in the list
+WARNING: Dependecy  amod  not included in the list
+WARNING: Dependecy  det  not included in the list
+CHILD advmod
+WARNING: Dependecy  cc  not included in the list
+WARNING: Dependecy  amod  not included in the list
+WARNING: Dependecy  aux  not included in the list
+CHILD dobj
+ADDED yourself
+LIST OF ATTR ['young']
+ADD young TO yourself
+ ---------------------- ADDED IT ------------------------
+-------------- Entering EVENT EXTRACTION -----------------
+event_char ['hold woman']
+EHST THR FUCK
+---- EVENT ADDED TO THE WORLD ----
+[<src.objects.eventchain.EventFrame.EventFrame object at 0x17C9C930>, <src.objects.eventchain.EventFrame.EventFrame object at 0x176031F0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x176033F0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x176033B0>, <src.objects.eventchain.EventFrame.EventFrame object at 0x183CDF30>, <src.objects.eventchain.EventFrame.EventFrame object at 0x280E92F0>]
+-1--1
+DOER:logo
+D-ACTIONS:logo:had
+REC:king,queen
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:what
+D-ACTIONS:what:'s
+REC:what
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:parents
+D-ACTIONS:parents:'s
+REC:None
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:hair
+D-ACTIONS:hair:contain
+REC:None
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:chest
+D-ACTIONS:chest:can storing
+REC:documents
+R-ACTIONS:[]
+SETTING:None
+-1--1
+DOER:hold woman
+D-ACTIONS:hold woman:gothel,wanted
+REC:magic
+R-ACTIONS:[]
+SETTING:None
+{}
+{'logo': <src.objects.storyworld.Object.Object object at 0x17C9CEF0>, 'king': <src.objects.storyworld.Object.Object object at 0x17C9C110>, 'queen': <src.objects.storyworld.Object.Object object at 0x17C9C850>, 'baby daughter': <src.objects.storyworld.Object.Object object at 0x17C9C530>, 'hair': <src.objects.storyworld.Object.Object object at 0x176037B0>, 'rapunzel': <src.objects.storyworld.Object.Object object at 0x176037D0>, 'healing powers': <src.objects.storyworld.Object.Object object at 0x17603790>, 'chest': <src.objects.storyworld.Object.Object object at 0x183CD7D0>, 'documents': <src.objects.storyworld.Object.Object object at 0x183CD850>, 'hold woman': <src.objects.storyworld.Object.Object object at 0x280E91D0>, 'magic': <src.objects.storyworld.Object.Object object at 0x280E9E70>, 'yourself': <src.objects.storyworld.Object.Object object at 0x280E9890>}
+OBJECT logo:
+Name: logo
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17C9C490>, <src.objects.storyworld.Attribute.Attribute object at 0x17C9C3F0>]
+attr CapableOf have False
+attr HasProperty rapunzel
+OBJECT king:
+Name: king
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT queen:
+Name: queen
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT baby daughter:
+Name: baby daughter
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[]
+OBJECT hair:
+Name: hair
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17603850>, <src.objects.storyworld.Attribute.Attribute object at 0x17603AF0>]
+attr HasProperty golden
+attr CapableOf contain False
+OBJECT rapunzel:
+Name: rapunzel
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 3
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17603870>]
+attr Has hair
+OBJECT healing powers:
+Name: healing powers
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x17603CF0>]
+attr HasProperty magical
+OBJECT chest:
+Name: chest
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183CD770>]
+attr CapableOf store False
+OBJECT documents:
+Name: documents
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x183CDD10>]
+attr HasProperty historical
+OBJECT hold woman:
+Name: hold woman
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x280E96F0>, <src.objects.storyworld.Attribute.Attribute object at 0x280E9790>, <src.objects.storyworld.Attribute.Attribute object at 0x280E9710>, <src.objects.storyworld.Attribute.Attribute object at 0x280E9110>]
+attr HasProperty selfish
+attr CapableOf gothel False
+attr CapableOf wanted False
+attr HasProperty mother
+OBJECT magic:
+Name: magic
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x280E9630>]
+attr HasProperty new
+OBJECT yourself:
+Name: yourself
+Type: []
+inSetting: {'LOC': None, 'DATE': None, 'TIME': None}
+mentioned: 1
+ attributes: %s[<src.objects.storyworld.Attribute.Attribute object at 0x280E9F30>]
+attr HasProperty young
+I:  selfish hold woman named mother gothel new the magic in rapunzel scared and wanted it to keep yourself young
+O:  Tell me more then.
+127.0.0.1 - - [02/Jun/2018 00:58:47] "[37mPOST /orsen HTTP/1.1[0m" 200 -
+<src.objects.storyworld.World.World object at 0x17C4BBB0>
+so she kidnapped the baby and raised her .
+howard deep in the woods never telling her that she was a princess
+Loading neuralcoref model from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/
+Loading spacy model
+
+    [93mInfo about model en_core_web_sm[0m
+
+    lang               en
+    pipeline           ['tagger', 'parser', 'ner']
+    accuracy           {'token_acc': 99.8698372794, 'ents_p': 84.9664503965, 'ents_r': 85.6312524451, 'uas': 91.7237657538, 'tags_acc': 97.0403350292, 'ents_f': 85.2975560875, 'las': 89.800872413}
+    name               core_web_sm
+    license            CC BY-SA 3.0
+    author             Explosion AI
+    url                https://explosion.ai
+    vectors            {'keys': 0, 'width': 0, 'vectors': 0}
+    sources            ['OntoNotes 5', 'Common Crawl']
+    version            2.0.0
+    spacy_version      >=2.0.0a18
+    parent_package     spacy
+    speed              {'gpu': None, 'nwords': 291344, 'cpu': 5122.3040471407}
+    email              contact@explosion.ai
+    description        English multi-task CNN trained on OntoNotes, with GloVe vectors trained on Common Crawl. Assigns word vectors, context-specific token vectors, POS tags, dependency parse and named entities.
+    source             C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\en_core_web_sm
+
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/static_word
+Loading embeddings from C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\neuralcoref\weights/tuned_word
+rep {}
+scores {'single_scores': {0: -1.4816107775115404, 1: 0.44120873933835214, 2: -1.4689128215530696}, 'pair_scores': {0: {}, 1: {0: -2.6019235517329102}, 2: {0: 6.7242308495073315, 1: 3.58560722240264}}}
+127.0.0.1 - - [02/Jun/2018 00:59:00] "[1m[35mPOST /orsen HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Bryan\Documents\Projects\Orsen\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\orsen.py", line 112, in orsen
+    extract_info(rawTextQuery)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\run.py", line 45, in extract_info
+    sentences[curr] = infoextraction.coref_resolution(sent, sentences[curr], sentences[curr], world, True)
+  File "C:\Users\Bryan\Documents\Projects\Orsen\src\inputprocessor\infoextraction.py", line 659, in coref_resolution
+    high_pair_index = pair_sc_lib.index(max(pair_sc_lib))
+ValueError: max() arg is an empty sequence
+ * Detected change in 'C:\\Users\\Bryan\\Documents\\Projects\\Orsen\\orsen.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 209-107-498
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

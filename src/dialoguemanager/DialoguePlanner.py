@@ -9,7 +9,9 @@ from src.objects.storyworld.Character import Character
 from src.objects.storyworld.Object import Object
 from src.objects.storyworld.World import World
 import time
-import spacy
+import random as ran
+
+STORY_THRESHOLD = 3
 
 MOVE_FEEDBACK = 1
 MOVE_GENERAL_PUMP = 2
@@ -17,6 +19,10 @@ MOVE_SPECIFIC_PUMP = 3
 MOVE_HINT = 4
 MOVE_REQUESTION = 5
 MOVE_UNKNOWN = 6
+
+NODE_START = 0
+NODE_END = 1
+NODE_EITHER = 2
 
 CONVERT_INFINITIVE = "inf"
 CONVERT_1PRSG = "1sg"
@@ -33,19 +39,21 @@ CONVERT_PAPL = "ppl"
 CONVERT_PAPART = "ppart"
 
 server = ServerInstance()
-nlp = spacy.load('en_core_web_sm')
 
 def retrieve_output(coreferenced_text, world_id):
     world = server.worlds[world_id]
-	
-    extract_information(coreferenced_text)
-	
     if len(world.reponses) > 0:
         last_response_type_num = world.reponses[len(world.reponses)-1].type_num
     else:
         last_response_type_num = -1
     output = ""
     choice = -1
+
+    if len(world.event_chain) <=  1 and ("my name is" in coreferenced_text or \
+            ("hello" in coreferenced_text and ("I am" in coreferenced_text or "I'm" in coreferenced_text))):
+        return Move.Move(template=["Nice to meet you! So how does your story start?"], type_num=MOVE_REQUESTION)
+
+
     if coreferenced_text == "":  # if no input found
         world.empty_response += 1
 
@@ -53,26 +61,24 @@ def retrieve_output(coreferenced_text, world_id):
             if last_response_type_num in [MOVE_FEEDBACK, MOVE_HINT]:
                 output = Move.Move(template=["I'm sorry, I did not understand what you just said. Can you say it again?"], type_num=MOVE_REQUESTION)
             elif last_response_type_num == MOVE_GENERAL_PUMP:
-                output = generate_response(MOVE_SPECIFIC_PUMP, world)
+                output = generate_response(MOVE_SPECIFIC_PUMP, world, [], coreferenced_text)
             elif last_response_type_num == MOVE_SPECIFIC_PUMP:
-                output = generate_response(MOVE_HINT, world)
+                output = generate_response(MOVE_HINT, world, [], coreferenced_text)
                 output.template = ["What if "]+output.template
             else:
                 output = Move.Move(template=["I don't think I heard you. Can you say that last part again?"], type_num=MOVE_REQUESTION)
 
-        if world.empty_response == 2:
-            print("2nd no response")
+        if world.empty_response >= 2 and world.empty_response <=4:
             if last_response_type_num == MOVE_GENERAL_PUMP:
-                output = generate_response(MOVE_SPECIFIC_PUMP, world)
+                output = generate_response(MOVE_SPECIFIC_PUMP, world, [], coreferenced_text)
             elif last_response_type_num == MOVE_SPECIFIC_PUMP:
-                output = generate_response(MOVE_HINT, world)
+                output = generate_response(MOVE_HINT, world, [], coreferenced_text)
                 output.template = ["What if "] + output.template
             else:
                 choice = random.randint(MOVE_GENERAL_PUMP, MOVE_HINT+1)
-                output = generate_response(choice, world)
+                output = generate_response(choice, world, [], coreferenced_text)
 
-        elif world.empty_response == 3:
-            print("3rd no response")
+        elif world.empty_response > 5:
             choice = MOVE_REQUESTION
             output = Move.Move(template=["I don't think I can hear you, are you sure you want to continue?"], type_num=choice)
     else:
@@ -80,17 +86,20 @@ def retrieve_output(coreferenced_text, world_id):
         world.empty_response = 0
 
         if getCategory(coreferenced_text) == CAT_STORY:
-            choice = random.randint(MOVE_FEEDBACK, MOVE_HINT+1)
-            output = generate_response(choice, world)
+            if len(world.event_chain) > STORY_THRESHOLD:
+                choice = random.randint(MOVE_FEEDBACK, MOVE_HINT+1)
+            else:
+                choice = random.randint(MOVE_FEEDBACK, MOVE_GENERAL_PUMP+1)
+
+            output = generate_response(choice, world, [], coreferenced_text)
 
         elif getCategory(coreferenced_text) == CAT_ANSWER:
-            print("check_answer")
             # TEMP TODO: idk how to answer this lmao / if "yes" or whatever, add to character data
             if last_response_type_num == MOVE_REQUESTION:
                 output = Move.Move(template=["Ok, let's keep going then!"], type_num=MOVE_UNKNOWN)
             else:
                 choice = random.randint(MOVE_FEEDBACK, MOVE_HINT+1)
-                output = generate_response(choice, world)
+                output = generate_response(choice, world, [], coreferenced_text)
 
         elif getCategory(coreferenced_text) == CAT_COMMAND:
             # TEMP TODO: check for further commands
@@ -102,7 +111,7 @@ def retrieve_output(coreferenced_text, world_id):
                     and ("say" in coreferenced_text or "next" in coreferenced_text):
                 choice = random.randint(MOVE_GENERAL_PUMP, MOVE_SPECIFIC_PUMP+1)
 
-            output = generate_response(choice, world)
+            output = generate_response(choice, world, [], coreferenced_text)
 
         else:
             output = Move.Move(template=["I don't know what to say."], type_num=MOVE_UNKNOWN)
@@ -111,64 +120,31 @@ def retrieve_output(coreferenced_text, world_id):
 
     return output
 
-def extract_information(text):
-		
-	document = nlp(text)
-	sentences = [sent.string.strip() for sent in document.sents]
-	list_of_sentences = []
-	list_of_sent = []
-	#Character
-	characters = []
 
-	#Part-Of-Speech, NER, Dependency Parsing
-	for sent in sentences:
-		print(sent)
-		sent = nlp(sent)
-		list_of_sentences.append(infoextraction.pos_ner_nc_processing(sent))
+def generate_response(move_code, world, remove_index, text):
 
-	list = []
-	curr = 0
-	bef = 0
-	isFirst = False
-	# DetailsExtraction
-	for sent in list_of_sentences:
-		if curr == 1 or curr > 1:
-			sentences[curr] = infoextraction.coref_resolution(sent, sentences[curr], sentences[bef], world, False)
-			print("returned: ", sentences[curr])
-		else:
-			sentences[curr] = infoextraction.coref_resolution(sent, sentences[curr], sentences[curr], world, True)
-			print("returned: ", sentences[curr])
-
-		print("current index: ", curr)
-		curr += 1
-		if bef == 0 and curr == 1:
-			print("oops")
-		else:
-			bef +=1
-
-	print(sentences)
-	for s in sentences:
-		print(s)
-		s = nlp(s)
-		list_of_sent.append(infoextraction.pos_ner_nc_processing(s))
-
-	for s in list_of_sent:
-		infoextraction.details_extraction(s, world, "ROOT")
-		infoextraction.event_extraction(s, world, "ROOT")
-
-
-
-def generate_response(move_code, world, remove_index=[]):
     choices = []
-
     subject = None
+
     if len(world.reponses) > 0:
         last_response_id = world.reponses[len(world.reponses)-1].move_id
     else:
         last_response_id = -1
 
     if move_code == MOVE_FEEDBACK:
-        choices = DBO_Move.get_templates_of_type(DBO_Move.TYPE_FEEDBACK)
+
+        pre_choices = DBO_Move.get_templates_of_type(DBO_Move.TYPE_FEEDBACK)
+
+        if len(world.event_chain) > 0:
+            last = world.event_chain[len(world.event_chain)-1]
+            for item in pre_choices:
+                if last.event_type == FRAME_EVENT and "happen" in item.get_string_response():
+                    choices.append(item)
+                if "happen" not in item.get_string_response():
+                    choices.append(item)
+        else:
+            choices = pre_choices
+
 
     elif move_code == MOVE_GENERAL_PUMP:
         pre_choices = DBO_Move.get_templates_of_type(DBO_Move.TYPE_GENERAL_PUMP)
@@ -204,11 +180,14 @@ def generate_response(move_code, world, remove_index=[]):
             break
 
         if index_loop > 20:
-            return generate_response(MOVE_FEEDBACK, world)
+            remove_index.append(move.move_id)
+            return generate_response(MOVE_FEEDBACK, world, remove_index, text)
 
     for blank_type in move.blanks:
 
-        if ":" in blank_type:
+        has_a_specified_concept = ":" in blank_type
+
+        if has_a_specified_concept:
             split_relation = str(blank_type).split(":")
             relation_index = -1
             replacement_index = -1
@@ -227,12 +206,12 @@ def generate_response(move_code, world, remove_index=[]):
                 if to_replace == "setting":
                     if subject is None:
                         remove_index.append(move.move_id)
-                        return generate_response(move_code, world, remove_index)
-                    elif subject.inSetting is None:
+                        return generate_response(move_code, world, remove_index, text)
+                    elif subject.inSetting['LOC'] is None:
                         remove_index.append(move.move_id)
-                        return generate_response(move_code, world, remove_index)
+                        return generate_response(move_code, world, remove_index, text)
                     else:
-                        txt_concept = subject.inSetting.name
+                        txt_concept = subject.inSetting['LOC']
 
             else:
                 txt_concept = to_replace
@@ -261,41 +240,84 @@ def generate_response(move_code, world, remove_index=[]):
             decided_concept = ""
             decided_node = -1
 
-            charas = world.get_top_characters()
-            objects = world.get_top_objects()
-            list_choices = charas + objects
             loop_total = 0
 
-            while True and subject is None:
+            if subject is None:
 
-                if len(list_choices) > 0:
-                    loop_total += 1
-                    choice_index = random.randint(0, len(list_choices))
-                    decided_item = list_choices[choice_index]
-                else:
-                    break
+                charas = world.get_top_characters()
+                objects = world.get_top_objects()
+                list_choices = charas + objects
 
-                if isinstance(decided_item, Object):
-                    decided_concept = decided_item.name
+                while True:
+                    if len(list_choices) > 0:
+                        loop_total += 1
+                        choice_index = random.randint(0, len(list_choices))
+                        decided_item = list_choices[choice_index]
+                    else:
+                        break
+
                     subject = decided_item
-                    decided_node = 0
 
-                elif isinstance(decided_item, Character):
-                    # get... something... relationship??
-                    # TODO: use relationship or something to get a concept
-                    print("check relationship")
+                    if len(subject.type) > 0:
+                        decided_concept = subject.name[random.randint(0, len(subject.type))]
+                        decided_node = NODE_START
+                    else:
 
-                if decided_node != -1 or loop_total > 10:
-                    break
+                        if isinstance(decided_item, Object):
+                            decided_concept = decided_item.name
+                            subject = decided_item
+                            decided_node = NODE_START
 
+                        elif isinstance(decided_item, Character):
+                            # get... something... relationship??
+                            # TODO: use relationship or something to get a concept
+                            found_attr = DBO_Concept.HAS_PROPERTY
+                            decided_concept = ""
+                            subject = decided_item
+
+                            if blank_type == DBO_Concept.HAS_PREREQ or blank_type == DBO_Concept.CAUSES:
+                                found_attr = DBO_Concept.CAPABLE_OF
+                                decided_node = NODE_START
+
+                            elif blank_type == DBO_Concept.IS_A or blank_type == DBO_Concept.PART_OF or DBO_Concept.USED_FOR:
+                                found_attr = DBO_Concept.IS_A
+                                decided_node = NODE_START
+
+                            for item in decided_item.attributes:
+                                if item.relation == found_attr and not item.isNegated:
+                                    decided_concept = item.name
+                                    break
+
+                            if decided_concept == "":
+                                remove_index.append(move.move_id)
+                                return generate_response(move_code, world, remove_index, text)
+
+                    if decided_node != -1 or loop_total > 10:
+                        break
+
+                if blank_type == DBO_Concept.AT_LOCATION:
+
+                    settings = world.settings
+
+                    if len(settings) > 0:
+                        decided_concept = settings[ran.choice(list(settings.keys()))].name
+                        decided_node = NODE_END
+                    else:
+                        remove_index.append(move.move_id)
+                        return generate_response(move_code, world, remove_index, text)
             # find
-            if decided_node == 0:
+            if decided_node == NODE_START:
                 usable_concepts = DBO_Concept.get_concept_like(blank_type, first=decided_concept)
-            elif decided_node == 1:
+            elif decided_node == NODE_END:
                 usable_concepts = DBO_Concept.get_concept_like(blank_type, second=decided_concept)
+            elif decided_node == NODE_EITHER:
+                usable_concepts = DBO_Concept.get_concept(decided_concept, blank_type)
+            else:
+                usable_concepts = []
 
             if len(usable_concepts) == 0:
-                usable_concepts = DBO_Concept.get_concept_like(blank_type)
+                remove_index.append(move.move_id)
+                return generate_response(move_code, world, remove_index, text)
 
             loop_total = 0
             while len(usable_concepts) > 0:
@@ -311,6 +333,8 @@ def generate_response(move_code, world, remove_index=[]):
                 move.template[move.template.index("end")] = concept.second
             else:
                 print("ERROR: NO USABLE CONCEPTS decided:",decided_concept)
+                remove_index.append(move.move_id)
+                return generate_response(move_code, world, remove_index, text)
 
         elif blank_type == "Object":
 
@@ -319,7 +343,7 @@ def generate_response(move_code, world, remove_index=[]):
                 objects = world.get_top_objects()
                 list_choices = charas + objects
 
-                choice_index = random.randint(0, len(choices))
+                choice_index = random.randint(0, len(list_choices))
                 subject = list_choices[choice_index]
 
             move.template[move.template.index("object")] = subject.id
@@ -329,8 +353,8 @@ def generate_response(move_code, world, remove_index=[]):
             if subject is None:
                 objects = world.get_top_objects()
 
-                choice_index = random.randint(0, len(choices))
-                subject = objects [choice_index]
+                choice_index = random.randint(0, len(objects))
+                subject = objects[choice_index]
 
             move.template[move.template.index("item")] = subject.id
 
@@ -343,7 +367,7 @@ def generate_response(move_code, world, remove_index=[]):
                     subject = charas[choice_index]
                 else:
                     remove_index.append(move.move_id)
-                    return generate_response(move_code, world, remove_index)
+                    return generate_response(move_code, world, remove_index, text)
             else:
                 chara = subject
 
@@ -352,50 +376,58 @@ def generate_response(move_code, world, remove_index=[]):
         elif blank_type == "inSetting":
             if subject is None:
                 remove_index.append(move.move_id)
-                return generate_response(move_code, world,remove_index)
+                return generate_response(move_code, world, remove_index, text)
             elif subject.inSetting is None:
                 remove_index.append(move.move_id)
-                return generate_response(move_code, world,remove_index)
+                return generate_response(move_code, world, remove_index, text)
             else:
-                move.template[move.template.index("setting")] = subject.inSetting.name
+                move.template[move.template.index("inSetting")] = subject.inSetting['LOC']
 
         elif blank_type == "Repeat":
-            if len(world.event_chain) > 0:
-                move.template[move.template.index("repeat")]\
-                    = world.event_chain[len(world.event_chain)-1].to_sentence_string()
+            move.template[move.template.index("repeat")] = text
+            # REPHRASING CODE
+            # if len(world.event_chain) > 0:
+            #     move.template[move.template.index("repeat")]\
+            #         = world.event_chain[len(world.event_chain)-1].to_sentence_string()
+            # else:
+            #     remove_index.append(move.move_id)
+            #     return generate_response(move_code, world, remove_index)
+
+        elif blank_type == "Pronoun":
+            if subject is None:
+                move.template[move.template.index("pronoun")] = "it"
             else:
-                remove_index.append(move.move_id)
-                return generate_response(move_code, world,remove_index)
+                if isinstance(subject, Object):
+                    move.template[move.template.index("pronoun")] = "they"
+                elif subject.gender == "":
+                    move.template[move.template.index("pronoun")] = "they"
+                elif subject.gender == "M":
+                    move.template[move.template.index("pronoun")] = "he"
+                elif subject.gender == "F":
+                    move.template[move.template.index("pronoun")] = "she"
+                else:
+                    move.template[move.template.index("pronoun")] = subject.name
+
         elif blank_type == "Event":
-            print("replace event")
-            # TODO: event verb replacements
+            loop_back = len(world.event_chain)-1
+
+            while loop_back >= 0:
+                event = world.event_chain[loop_back]
+
+                if event.event_type == FRAME_EVENT:
+                    if len(event.doer_actions) > 0:
+                        verb = event.doer_actions[0]
+                        if "eventverb" in move.template:
+                            move.template[move.template.index("eventverb")] = verb
+                        #TODO: subject = doer
+
+                loop_back -= 1
+
+            if loop_back == -1:
+                remove_index.append(move.move_id)
+                return generate_response(move_code, world, remove_index, text)
+
 
     move.subject = subject
     return move
 
-
-# start_time = time.time()
-#
-# test_world = World()
-# server.worlds[test_world.id] = test_world
-#
-# test_world.characters["KAT"] = Character("KAT", "KAT", times=3)
-# test_world.characters["DAVE"] = Character("DAVE", "DAVE", times=5)
-# test_world.characters["JADE"] = Character("JADE", "JADE", times=0)
-# test_world.characters["ROSE"] = Character("ROSE", "ROSE", times=0)
-#
-# test_world.objects["bag"] = Object("bag", "bag", times=3)
-# test_world.objects["book"] = Object("book", "book", times=5)
-# test_world.objects["pen"] = Object("pen", "pen", times=0)
-#
-# print(retrieve_output("Whatever.", test_world.id))
-# print(retrieve_output("Whatever.", test_world.id))
-# print(retrieve_output("Whatever.", test_world.id))
-# print(retrieve_output("Whatever.", test_world.id))
-#
-# print(retrieve_output("Whatever.", test_world.id))
-# print(retrieve_output("Whatever.", test_world.id))
-# print(retrieve_output("Whatever.", test_world.id))
-# print(retrieve_output("Whatever.", test_world.id))
-#
-# print("--- %s seconds ---" % (time.time() - start_time))
